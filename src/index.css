@@ -19,6 +19,8 @@
     --color-text-dark: #0a0a0a;
     --color-text-secondary: #808080;
     --color-accent: #b48144;
+    --color-shadow-light: rgba(142, 142, 142, 0.4);
+    --color-shadow-dark: hsla(0, 0%, 100%, 0.4);
   }
 }
 
@@ -27,6 +29,7 @@
   --accent: var(--color-accent);
   --text: var(--color-text-dark);
   --text-secondary: var(--color-text-secondary);
+  --shadow: var(--color-shadow-light);
 }
 
 .theme-dark {
@@ -34,4 +37,5 @@
   --accent: var(--color-accent);
   --text: var(--color-text-light);
   --text-secondary: var(--color-text-secondary);
+  --shadow: var(--color-shadow-dark);
 }

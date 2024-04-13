@@ -12,6 +12,10 @@ export default {
         accent: 'var(--accent)',
         text: 'var(--text)',
         'text-secondary': 'var(--text-secondary)',
+        shadow: 'var(--shadow)',
+      },
+      boxShadow: {
+        custom: ' 0 -10px 20px 10px var(--shadow)',
       },
     },
   },
