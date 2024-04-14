@@ -1,10 +1,10 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import { IoMdContrast } from 'react-icons/io';
-import { useAppContext } from '../store/AppContext';
+import { useAppContext } from '../../store/AppContext';
 import { useEffect, useState } from 'react';
 
-export default function Navbar() {
-  const { theme, setTheme } = useAppContext();
+export default function NavLinkContainer() {
+  const { theme, setTheme, setIsNavOpen } = useAppContext();
   const [active, setActive] = useState({
     home: true,
     projects: false,
@@ -85,13 +85,18 @@ export default function Navbar() {
   }, [pathName]);
 
   return (
-    <header className=' shadow-custom border-b-2 border-background backdrop-blur-sm '>
-      <nav className=' mx-auto max-w-[1200px]'>
-        <ul className=' flex items-center tracking-wider justify-center select-none uppercase text-xs font-vietnam'>
+    <header
+      className=' pt-8 bg-glass shadow-custom-sm select-none border-l-2 border-background backdrop-blur-custom h-screen flex flex-col gap-4'
+      onClick={(e) => e.stopPropagation()}
+    >
+      <nav className=' flex flex-col gap-8' onClick={() => setIsNavOpen(false)}>
+        <ul className=' flex flex-col tracking-wider uppercase text-sm font-vietnam'>
           <li className=' w-full'>
             <NavLink
-              className={` active:text-accent hover:text-text duration-150 transition-all px-16 py-8 inline-block w-full text-center text-text-secondary ${
-                active.home && 'text-accent hover:text-accent'
+              className={`w-full inline-block px-8 p-4  active:text-accent duration-150 transition-all ${
+                active.home
+                  ? ' text-accent hover:text-accent'
+                  : ' text-text-secondary hover:text-text'
               }`}
               to={'/'}
               onClick={() =>
@@ -109,8 +114,10 @@ export default function Navbar() {
           </li>
           <li className=' w-full'>
             <NavLink
-              className={` active:text-accent hover:text-text duration-150 transition-all px-16 py-8 inline-block w-full text-center text-text-secondary ${
-                active.projects && 'text-accent hover:text-accent'
+              className={`w-full inline-block px-8 py-4  active:text-accent duration-150 transition-all ${
+                active.projects
+                  ? ' text-accent hover:text-accent'
+                  : ' text-text-secondary hover:text-text'
               }`}
               to={'/projects'}
               onClick={() =>
@@ -128,8 +135,10 @@ export default function Navbar() {
           </li>
           <li className=' w-full'>
             <NavLink
-              className={` active:text-accent hover:text-text duration-150 transition-all px-16 py-8 inline-block w-full text-center text-text-secondary ${
-                active.experience && 'text-accent hover:text-accent'
+              className={`w-full inline-block px-8 py-4  active:text-accent duration-150 transition-all  ${
+                active.experience
+                  ? ' text-accent hover:text-accent'
+                  : ' text-text-secondary hover:text-text'
               }`}
               to={'/experience'}
               onClick={() =>
@@ -147,8 +156,10 @@ export default function Navbar() {
           </li>
           <li className=' w-full'>
             <NavLink
-              className={` active:text-accent hover:text-text duration-150 transition-all px-16 py-8 inline-block w-full text-center text-text-secondary ${
-                active.qualification && 'text-accent hover:text-accent'
+              className={`w-full inline-block px-8 py-4  active:text-accent duration-150 transition-all  ${
+                active.qualification
+                  ? ' text-accent hover:text-accent'
+                  : ' text-text-secondary hover:text-text'
               }`}
               to={'/qualification'}
               onClick={() =>
@@ -166,8 +177,10 @@ export default function Navbar() {
           </li>
           <li className=' w-full'>
             <NavLink
-              className={` active:text-accent hover:text-text duration-150 transition-all px-16 py-8 inline-block w-full text-center text-text-secondary ${
-                active.about && 'text-accent hover:text-accent'
+              className={`w-full inline-block px-8 py-4  active:text-accent duration-150 transition-all  ${
+                active.about
+                  ? ' text-accent hover:text-accent'
+                  : ' text-text-secondary hover:text-text'
               }`}
               to={'/about'}
               onClick={() =>
@@ -185,8 +198,10 @@ export default function Navbar() {
           </li>
           <li className=' w-full'>
             <NavLink
-              className={` active:text-accent hover:text-text duration-150 transition-all px-16 py-8 inline-block w-full text-center text-text-secondary border-r border-shadow ${
-                active.contact && 'text-accent hover:text-accent'
+              className={`w-full inline-block px-8 py-4  active:text-accent duration-150 transition-all ${
+                active.contact
+                  ? ' text-accent hover:text-accent'
+                  : ' text-text-secondary hover:text-text'
               }`}
               to={'/contact'}
               onClick={() =>
@@ -203,14 +218,19 @@ export default function Navbar() {
               contact
             </NavLink>
           </li>
-          <li className='px-8 '>
-            <IoMdContrast
-              className={` text-2xl h-full block fill-text`}
-              onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-            />
-          </li>
         </ul>
       </nav>
+      <span
+        className=' px-8 p-4 cursor-pointer flex gap-1 items-center text-text uppercase text-sm font-vietnam'
+        onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+      >
+        <IoMdContrast
+          className={` transition-transform duration-300 text-xl h-full block fill-text ${
+            theme === 'light' ? ' rotate-0' : 'rotate-[180deg]'
+          } `}
+        />
+        {`${theme === 'light' ? 'dark' : 'light'}`}
+      </span>
     </header>
   );
 }

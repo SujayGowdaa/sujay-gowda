@@ -13,6 +13,7 @@ export default function AppContext({ children }) {
       return localStorage.getItem('theme');
     }
   });
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   useEffect(() => {
     localStorage.setItem('theme', theme);
@@ -23,6 +24,8 @@ export default function AppContext({ children }) {
       value={{
         theme,
         setTheme,
+        isNavOpen,
+        setIsNavOpen,
       }}
     >
       {children}

@@ -36,5 +36,5 @@ export default function ParticlesBackground() {
     );
   }
 
-  return <></>;
+  return null;
 }
