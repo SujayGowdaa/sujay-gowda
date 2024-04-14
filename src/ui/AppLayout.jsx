@@ -3,7 +3,7 @@ import { useAppContext } from '../store/AppContext';
 
 import ParticlesBackground from '../components/particles/ParticlesBackground';
 import Navbar from '../components/navbar/Navbar';
-import Button from './Button';
+import NavigationButtons from '../ui/NavigationButtons';
 
 export default function AppLayout() {
   const { theme, setIsNavOpen } = useAppContext();
@@ -15,10 +15,7 @@ export default function AppLayout() {
     <div className={`theme-${theme}`} onClick={() => setIsNavOpen(false)}>
       <Navbar />
       <Outlet />
-      <div className='  fixed justify-center bottom-0 flex gap-4 w-full p-8'>
-        <Button type={'circle'} position={'left'} />
-        <Button type={'circle'} position={'right'} />
-      </div>
+      <NavigationButtons />
       <ParticlesBackground />
     </div>
   );

@@ -2,6 +2,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { IoMdContrast } from 'react-icons/io';
 import { useAppContext } from '../../store/AppContext';
 import { useEffect, useState } from 'react';
+import Logo from '../../ui/Logo';
 
 export default function NavLinkContainer() {
   const { theme, setTheme, setIsNavOpen } = useAppContext();
@@ -86,14 +87,17 @@ export default function NavLinkContainer() {
 
   return (
     <header
-      className=' pt-8 bg-glass shadow-custom-sm select-none border-l-2 border-background backdrop-blur-custom h-screen flex flex-col gap-4'
+      className='justify-center bg-glass shadow-custom-sm select-none border-l-2 border-background backdrop-blur-custom h-screen flex flex-col gap-8'
       onClick={(e) => e.stopPropagation()}
     >
+      <div className=' px-8 '>
+        <Logo width={' w-[40px]'} />
+      </div>
       <nav className=' flex flex-col gap-8' onClick={() => setIsNavOpen(false)}>
         <ul className=' flex flex-col tracking-wider uppercase text-sm font-vietnam'>
           <li className=' w-full'>
             <NavLink
-              className={`w-full inline-block px-8 p-4  active:text-accent duration-150 transition-all ${
+              className={` w-full inline-block px-8 font-medium py-2 pr-16  active:text-accent duration-150 transition-all ${
                 active.home
                   ? ' text-accent hover:text-accent'
                   : ' text-text-secondary hover:text-text'
@@ -114,7 +118,7 @@ export default function NavLinkContainer() {
           </li>
           <li className=' w-full'>
             <NavLink
-              className={`w-full inline-block px-8 py-4  active:text-accent duration-150 transition-all ${
+              className={` w-full inline-block px-8 font-medium py-2 pr-16  active:text-accent duration-150 transition-all ${
                 active.projects
                   ? ' text-accent hover:text-accent'
                   : ' text-text-secondary hover:text-text'
@@ -135,7 +139,7 @@ export default function NavLinkContainer() {
           </li>
           <li className=' w-full'>
             <NavLink
-              className={`w-full inline-block px-8 py-4  active:text-accent duration-150 transition-all  ${
+              className={` w-full inline-block px-8 font-medium py-2 pr-16  active:text-accent duration-150 transition-all  ${
                 active.experience
                   ? ' text-accent hover:text-accent'
                   : ' text-text-secondary hover:text-text'
@@ -156,7 +160,7 @@ export default function NavLinkContainer() {
           </li>
           <li className=' w-full'>
             <NavLink
-              className={`w-full inline-block px-8 py-4  active:text-accent duration-150 transition-all  ${
+              className={` w-full inline-block px-8 font-medium py-2 pr-16  active:text-accent duration-150 transition-all  ${
                 active.qualification
                   ? ' text-accent hover:text-accent'
                   : ' text-text-secondary hover:text-text'
@@ -177,7 +181,7 @@ export default function NavLinkContainer() {
           </li>
           <li className=' w-full'>
             <NavLink
-              className={`w-full inline-block px-8 py-4  active:text-accent duration-150 transition-all  ${
+              className={` w-full inline-block px-8 font-medium py-2 pr-16  active:text-accent duration-150 transition-all  ${
                 active.about
                   ? ' text-accent hover:text-accent'
                   : ' text-text-secondary hover:text-text'
@@ -198,7 +202,7 @@ export default function NavLinkContainer() {
           </li>
           <li className=' w-full'>
             <NavLink
-              className={`w-full inline-block px-8 py-4  active:text-accent duration-150 transition-all ${
+              className={` w-full inline-block px-8 font-medium py-2 pr-16  active:text-accent duration-150 transition-all ${
                 active.contact
                   ? ' text-accent hover:text-accent'
                   : ' text-text-secondary hover:text-text'

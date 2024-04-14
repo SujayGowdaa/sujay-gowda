@@ -12,8 +12,11 @@ export default {
         background: 'var(--background)',
         glass: 'var(--glass)',
         accent: 'var(--accent)',
+        'accent-secondary': 'var(--accent-secondary)',
         text: 'var(--text)',
         'text-secondary': 'var(--text-secondary)',
+        'gold-light': 'var(--gold-light)',
+        'gold-dark': 'var(--gold-dark)',
         shadow: 'var(--shadow)',
       },
       boxShadow: {
@@ -21,6 +24,11 @@ export default {
         'custom-sm': ' 0px 0px 15px 0px var(--shadow)',
         btn: ' 0px 0px 8px 4px var(--shadow)',
         'btn-active': ' 0px 0px 4px 2px var(--shadow)',
+        card: ' 0px 0px 6px 3px var(--shadow)',
+        glow: [
+          '0 0px 20px rgba(255,255, 255, 0.35)',
+          '0 0px 65px rgba(255, 255,255, 0.2)',
+        ],
       },
     },
   },

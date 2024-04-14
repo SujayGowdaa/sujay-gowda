@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <div
       className={` flex max-w-min items-start fixed top-0 z-10 gap-6 transition-all duration-500 ${
-        isNavOpen ? 'right-0' : 'right-[-190px]'
+        isNavOpen ? 'right-0' : 'right-[-220px]'
       } `}
       onClick={() => setIsNavOpen(false)}
     >

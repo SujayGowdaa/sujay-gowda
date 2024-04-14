@@ -8,7 +8,7 @@ export default function Button({ type, onClick, position }) {
   if (type === 'circle')
     return (
       <button
-        className={` group p-2 transition-all duration-100 bg-background rounded-full outline outline-1 outline-shadow flex justify-center items-center ${
+        className={` group p-2 pointer-events-auto transition-all duration-100 bg-background rounded-full outline outline-1 outline-shadow flex justify-center items-center ${
           position && 'shadow-btn active:shadow-btn-active'
         }`}
         onClick={(e) => {
