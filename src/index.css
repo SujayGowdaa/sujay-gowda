@@ -15,8 +15,8 @@
     /* Custom Colors */
     --color-background-white: #ffffff;
     --color-background-black: #000000;
-    --color-glass-light: #ffffff4d;
-    --color-glass-dark: #0a0a0a4d;
+    --color-glass-light: rgba(255, 255, 255, 0.8);
+    --color-glass-dark: rgba(10, 10, 10, 0.8);
     --color-text-light: #f5f5f5;
     --color-text-dark: #0a0a0a;
     --color-text-secondary: #808080;

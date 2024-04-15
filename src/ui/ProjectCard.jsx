@@ -32,10 +32,10 @@ export default function ProjectCard() {
                     </Link>
                   </div>
                 </div>
-                <p className=' text-text-secondary text-sm '>{description}</p>
               </div>
-              <div className=' flex flex-col gap-2'>
-                <h4 className=' capitalize text-sm font-semibold text-text'>
+              <p className=' text-text text-sm '>{description}</p>
+              <div className=' flex flex-col gap-4'>
+                <h4 className=' capitalize text-sm font-semibold text-text-secondary'>
                   tech stack
                 </h4>
                 <div className=' flex gap-2 gap-y-3 flex-wrap'>

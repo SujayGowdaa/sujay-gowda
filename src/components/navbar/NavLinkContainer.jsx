@@ -88,7 +88,7 @@ export default function NavLinkContainer() {
   return (
     <header className='justify-center bg-glass shadow-custom-sm select-none border-l-2 border-background backdrop-blur-custom h-screen flex flex-col gap-8'>
       <div className=' px-8 cursor-default'>
-        <Logo width={' w-[40px]'} />
+        <Logo width={' w-[60px]'} />
       </div>
       <nav
         className=' flex flex-col gap-8 '
@@ -97,7 +97,7 @@ export default function NavLinkContainer() {
         <ul className=' flex flex-col tracking-wider uppercase text-sm font-vietnam'>
           <li className=' w-full'>
             <NavLink
-              className={` w-full inline-block px-8 font-medium py-2 pr-16  active:text-accent duration-150 transition-all ${
+              className={` w-full inline-block px-8 font-medium py-2 pr-16 active:text-accent duration-150 transition-all ${
                 active.home
                   ? ' text-accent hover:text-accent'
                   : ' text-text-secondary hover:text-text'
@@ -225,15 +225,18 @@ export default function NavLinkContainer() {
         </ul>
       </nav>
       <span
-        className=' px-8 p-4 cursor-pointer  flex gap-1 items-center text-text uppercase text-sm font-vietnam'
-        onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+        className=' px-8 p-4 cursor-pointer  flex gap-2 items-center text-text uppercase text-sm font-vietnam'
+        onClick={(e) => {
+          e.stopPropagation();
+          setTheme(theme === 'light' ? 'dark' : 'light');
+        }}
       >
+        {`${theme === 'light' ? 'dark' : 'light'}`}
         <IoMdContrast
-          className={` transition-transform duration-300 text-xl h-full block fill-text ${
+          className={` transition-transform duration-300 text-base h-full block fill-text ${
             theme === 'light' ? ' rotate-0' : 'rotate-[180deg]'
           } `}
         />
-        {`${theme === 'light' ? 'dark' : 'light'}`}
       </span>
     </header>
   );

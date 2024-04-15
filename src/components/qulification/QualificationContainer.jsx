@@ -12,8 +12,8 @@ export default function QualificationContainer() {
         <CertificateMain />
         <div className=' flex flex-col gap-2'>
           <PageTitleSecondary title={'certificates'} />
-          <p className=' text-text-secondary text-center font-vietnam text-sm'>
-            Over the years, I've embarked on a continuous journey of
+          <p className=' text-text text-center font-vietnam text-sm'>
+            Over the years, I&apos;ve embarked on a continuous journey of
             self-improvement and skill acquisition through various online
             courses. These courses have been instrumental in expanding my
             knowledge and enhancing my skill set.

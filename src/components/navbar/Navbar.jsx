@@ -8,21 +8,19 @@ export default function Navbar() {
   return (
     <>
       <div
-        className={` flex max-w-min  items-start fixed top-0 z-10 gap-6  transition-all duration-500 ${
+        className={` flex max-w-min items-start fixed top-0 z-10 gap-6 transition-all duration-500 ${
           isNavOpen ? 'right-0' : 'right-[-220px] pointer-events-none'
         } `}
         onClick={() => setIsNavOpen(false)}
       >
         <div className=' mt-4 '>
-          <Button
-            className=' '
-            type='circle'
-            onClick={() => setIsNavOpen(!isNavOpen)}
-          />
+          <Button type='circle' onClick={() => setIsNavOpen(!isNavOpen)} />
         </div>
         <NavLinkContainer />
       </div>
-      {/* {isNavOpen && <div className=' w-screen h-screen'></div>} */}
+      {isNavOpen && (
+        <div className=' fixed top-0 left-0 z-[9] overflow-hidden backdrop-blur-[3px] backdrop-contrast-25 backdrop-grayscale w-screen h-screen'></div>
+      )}
     </>
   );
 }
