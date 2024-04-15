@@ -2,13 +2,13 @@
 import { IoIosArrowForward } from 'react-icons/io';
 import { useAppContext } from '../store/AppContext';
 
-export default function Button({ type, onClick, position }) {
+export default function Button({ type, onClick, position, className }) {
   const { isNavOpen } = useAppContext();
 
   if (type === 'circle')
     return (
       <button
-        className={` group p-2 pointer-events-auto transition-all duration-100 bg-background rounded-full outline outline-1 outline-shadow flex justify-center items-center ${
+        className={` ${className} bg-transparent hover:bg-background group p-2 pointer-events-auto transition-all duration-100 rounded-full outline outline-1 outline-shadow flex justify-center items-center ${
           position && 'shadow-btn active:shadow-btn-active'
         }`}
         onClick={(e) => {

@@ -25,10 +25,7 @@ export default {
         btn: ' 0px 0px 8px 4px var(--shadow)',
         'btn-active': ' 0px 0px 4px 2px var(--shadow)',
         card: ' 0px 0px 6px 3px var(--shadow)',
-        glow: [
-          '0 0px 20px rgba(255,255, 255, 0.35)',
-          '0 0px 65px rgba(255, 255,255, 0.2)',
-        ],
+        xp: ' 0px 8px 4px -4px var(--shadow)',
       },
     },
   },

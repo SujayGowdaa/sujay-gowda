@@ -86,14 +86,14 @@ export default function NavLinkContainer() {
   }, [pathName]);
 
   return (
-    <header
-      className='justify-center bg-glass shadow-custom-sm select-none border-l-2 border-background backdrop-blur-custom h-screen flex flex-col gap-8'
-      onClick={(e) => e.stopPropagation()}
-    >
-      <div className=' px-8 '>
+    <header className='justify-center bg-glass shadow-custom-sm select-none border-l-2 border-background backdrop-blur-custom h-screen flex flex-col gap-8'>
+      <div className=' px-8 cursor-default'>
         <Logo width={' w-[40px]'} />
       </div>
-      <nav className=' flex flex-col gap-8' onClick={() => setIsNavOpen(false)}>
+      <nav
+        className=' flex flex-col gap-8 '
+        onClick={() => setIsNavOpen(false)}
+      >
         <ul className=' flex flex-col tracking-wider uppercase text-sm font-vietnam'>
           <li className=' w-full'>
             <NavLink
@@ -225,7 +225,7 @@ export default function NavLinkContainer() {
         </ul>
       </nav>
       <span
-        className=' px-8 p-4 cursor-pointer flex gap-1 items-center text-text uppercase text-sm font-vietnam'
+        className=' px-8 p-4 cursor-pointer  flex gap-1 items-center text-text uppercase text-sm font-vietnam'
         onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
       >
         <IoMdContrast
