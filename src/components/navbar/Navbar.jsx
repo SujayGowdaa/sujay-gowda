@@ -9,7 +9,7 @@ export default function Navbar() {
     <>
       <div
         className={` flex max-w-min items-start fixed top-0 z-10 gap-6 transition-all duration-500 ${
-          isNavOpen ? 'right-0' : 'right-[-220px] pointer-events-none'
+          isNavOpen ? 'right-0' : 'right-[-230px] pointer-events-none'
         } `}
         onClick={() => setIsNavOpen(false)}
       >

@@ -3,7 +3,7 @@
 export default function Skills({ field, tools }) {
   return (
     <div className=' justify-center font-vietnam flex flex-col gap-1  '>
-      <span className=' text-nowrap text-sm justify-center flex gap-1 capitalize font-medium'>
+      <span className=' text-nowrap text-sm text-text justify-center flex gap-1 capitalize font-medium'>
         {field}
       </span>
       <div className=' flex flex-wrap justify-center gap-1'>

@@ -5,7 +5,7 @@ import { socialMedia } from '../socialMedia';
 
 export default function FollowMe() {
   return (
-    <div className=' flex gap-2 justify-center'>
+    <div className=' flex gap-2 gap-y-1 justify-center flex-wrap'>
       {socialMedia.map((media) => {
         const { name, link } = media;
 

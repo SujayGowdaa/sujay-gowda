@@ -1,4 +1,4 @@
-import { MdOutlineOpenInNew } from 'react-icons/md';
+import { MdOpenInNew, MdOutlineOpenInNew } from 'react-icons/md';
 import { qualifications } from '../qualification';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -20,8 +20,9 @@ export default function Certificate() {
           >
             {isCertificateHover === id && (
               <Link to={link} target='_blank'>
-                <div className=' absolute top-0 left-0 h-full w-full bg-glass backdrop-blur-custom z-[1] flex justify-center items-center cursor-pointer font-medium capitalize font-vietnam text-sm outline outline-[1px] outline-accent active:text-accent'>
+                <div className=' gap-1 absolute top-0 left-0 h-full text-text w-full bg-glass backdrop-blur-custom z-[1] flex justify-center items-center cursor-pointer font-medium capitalize font-vietnam text-sm outline outline-[1px] outline-accent active:text-accent'>
                   show certificate
+                  <MdOpenInNew className=' text-lg' />
                 </div>
               </Link>
             )}

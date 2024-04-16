@@ -113,7 +113,7 @@ export default function NavLinkContainer() {
                 })
               }
             >
-              home
+              › home
             </NavLink>
           </li>
           <li className=' w-full'>
@@ -134,7 +134,7 @@ export default function NavLinkContainer() {
                 })
               }
             >
-              projects
+              › projects
             </NavLink>
           </li>
           <li className=' w-full'>
@@ -155,12 +155,12 @@ export default function NavLinkContainer() {
                 })
               }
             >
-              experience
+              › experience
             </NavLink>
           </li>
           <li className=' w-full'>
             <NavLink
-              className={` w-full inline-block px-8 font-medium py-2 pr-16  active:text-accent duration-150 transition-all  ${
+              className={` w-full text-nowrap inline-block px-8 font-medium py-2 pr-16  active:text-accent duration-150 transition-all  ${
                 active.qualification
                   ? ' text-accent hover:text-accent'
                   : ' text-text-secondary hover:text-text'
@@ -176,7 +176,7 @@ export default function NavLinkContainer() {
                 })
               }
             >
-              qualification
+              › qualification
             </NavLink>
           </li>
           <li className=' w-full'>
@@ -197,7 +197,7 @@ export default function NavLinkContainer() {
                 })
               }
             >
-              about
+              › about
             </NavLink>
           </li>
           <li className=' w-full'>
@@ -219,7 +219,7 @@ export default function NavLinkContainer() {
                 })
               }
             >
-              contact
+              › contact
             </NavLink>
           </li>
         </ul>
