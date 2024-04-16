@@ -13,7 +13,7 @@ export default function Navbar() {
         } `}
         onClick={() => setIsNavOpen(false)}
       >
-        <div className=' mt-4 '>
+        <div className=' mt-6 xs:mt-8 '>
           <Button type='circle' onClick={() => setIsNavOpen(!isNavOpen)} />
         </div>
         <NavLinkContainer />

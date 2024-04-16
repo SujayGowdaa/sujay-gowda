@@ -3,8 +3,8 @@ import Title from './Title';
 
 export default function LandingPage() {
   return (
-    <div className=' text-center flex justify-center items-center flex-col gap-4'>
-      <Logo width={'w-[100px]'} />
+    <div className=' text-center flex justify-center items-center flex-col gap-4 xs:flex-row xs:text-left'>
+      <Logo width={'w-[80px]'} />
       <Title />
     </div>
   );

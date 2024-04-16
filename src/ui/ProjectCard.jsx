@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default function ProjectCard() {
   return (
-    <div className=' flex flex-wrap gap-8 justify-center '>
+    <div className=' flex flex-wrap gap-8 justify-center xs:justify-start'>
       {projects.map((project) => {
         const { name, image, description, projectLink, githubLink, skills } =
           project;

@@ -9,9 +9,9 @@ export default function QualificationContainer() {
     <Container>
       <PageTitle title={'qualification'} />
       <CertificateMain />
-      <div className=' flex flex-col gap-2'>
+      <div className=' flex flex-col gap-2 xs:gap-3'>
         <PageTitleSecondary title={'certificates'} />
-        <p className=' text-text text-center font-vietnam text-sm'>
+        <p className=' text-text text-center font-vietnam text-sm xs:text-left xs:text-base'>
           Over the years, I&apos;ve embarked on a continuous journey of
           self-improvement and skill acquisition through various online courses.
           These courses have been instrumental in expanding my knowledge and

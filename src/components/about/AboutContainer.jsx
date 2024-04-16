@@ -23,14 +23,14 @@ export default function AboutContainer() {
       <PageTitle title={'about'} />
 
       <div className=' relative flex flex-col '>
-        <div className=' h-[200px]'>
+        <div className=' h-[200px] xs:h-[300px]'>
           <img
             className=' h-full w-auto object-cover object-left'
             src={banner1}
             alt='sujay gowda'
           />
         </div>
-        <p className=' text-sm font-vietnam text-text bg-glass backdrop-blur-custom shadow-card p-4'>
+        <p className=' text-sm font-vietnam text-text bg-glass backdrop-blur-custom shadow-card p-4 xs:text-base xs:p-6'>
           I&apos;m an enthusiastic individual based in Bangalore with a passion
           for coding and continuous learning, specializing in frontend
           development to create intuitive user interfaces and bring designs to
@@ -46,14 +46,14 @@ export default function AboutContainer() {
           of creating awesome web applications.
         </p>
       </div>
-      <div className=' flex flex-col gap-4'>
+      <div className=' flex flex-col gap-2 xs:gap-4'>
         <PageTitleSecondary title={'skills'} />
         <Skills field={skillOneField} tools={skillOneTools} />
         <Skills field={skillTwoField} tools={skillTwoTools} />
       </div>
-      <div className=' flex flex-col gap-2'>
+      <div className=' flex flex-col gap-2 xs:gap-4'>
         <PageTitleSecondary title={'hobbies'} />
-        <Paragraph className={' text-center'}>
+        <Paragraph className={' text-center xs:text-left'}>
           Beyond my professional pursuits, I value personal growth and
           well-being through a variety of interests and hobbies. These include
           maintaining a healthy lifestyle with fitness activities, developing my
@@ -64,10 +64,10 @@ export default function AboutContainer() {
       <div className=' overflow-hidden outline outline-[1px] outline-background '>
         <img src={banner2} alt='sujay gowda' />
       </div>
-      <div className=' flex flex-col gap-2'>
-        <div className=' flex gap-2 items-center justify-center'>
+      <div className=' flex flex-col gap-2 xs:gap-4'>
+        <div className=' flex gap-2 items-center justify-center xs:justify-start'>
           <PageTitleSecondary title={'follow me'} />
-          <MdOpenInNew className=' text-xl text-accent' />
+          <MdOpenInNew className=' text-xl text-accent xs:text-2xl' />
         </div>
         <FollowMe />
       </div>

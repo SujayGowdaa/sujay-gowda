@@ -32,28 +32,28 @@ export default function Accordion() {
             onClick={() => setIsAccordionOpen(isAccordionOpen === i ? null : i)}
           >
             <div
-              className={` group flex justify-between items-center py-4 px-4  ${
+              className={` group flex justify-between items-center py-4 px-4 xs:py-5 xs:px-6 ${
                 isAccordionOpen === i
                   ? 'border-b-[1px] border-shadow shadow-xp'
                   : 'border-y-[1px] border-shadow'
               }`}
             >
-              <div className=' flex items-center gap-4'>
-                <div className=' flex flex-col gap-2'>
+              <div className=' flex items-center'>
+                <div className=' flex flex-col gap-2 '>
                   <h2
-                    className={` font-vietnam font-medium capitalize text-sm group-hover:text-accent ${
+                    className={` font-vietnam font-medium capitalize text-sm group-hover:text-accent xs:text-base  ${
                       isAccordionOpen === i ? ' text-accent' : 'text-text '
                     }`}
                   >
                     {role}
                   </h2>
-                  <h3 className=' capitalize text-text-secondary text-xs'>
+                  <h3 className=' capitalize text-text-secondary text-xs xs:text-base '>
                     {company}
                   </h3>
                 </div>
               </div>
-              <div className=' flex items-center gap-4 text-xs'>
-                {viewportWidth > 425 && viewportWidth < 578 && (
+              <div className=' flex items-center gap-4 text-xs xs:text-sm '>
+                {viewportWidth > 425 && viewportWidth < 700 && (
                   <>
                     <span className=' flex gap-1'>
                       <span className='  text-text-secondary capitalize'>
@@ -66,7 +66,7 @@ export default function Accordion() {
                     </span>
                   </>
                 )}
-                {viewportWidth > 578 && (
+                {viewportWidth > 700 && (
                   <>
                     <span className=' flex gap-1'>
                       <span className='  text-text-secondary capitalize'>
@@ -92,17 +92,20 @@ export default function Accordion() {
                     isAccordionOpen === i ? ' rotate-180' : 'rotate-0'
                   }`}
                 >
-                  <IoIosArrowDown className=' text-text' />
+                  <IoIosArrowDown className=' text-text xs:text-xl' />
                 </span>
               </div>
             </div>
 
             <div className=' flex flex-col gap-2 bg-glass backdrop-blur-custom'>
               {isAccordionOpen === i && (
-                <div className=' flex flex-col gap-3 p-4'>
+                <div className=' flex flex-col gap-2 p-4 xs:p-6 xs:gap-3'>
                   {viewportWidth < 425 && (
                     <div className=' flex gap-4 items-center text-xs flex-wrap'>
                       <span className=' flex gap-1'>
+                        <span className=' w-[2px] h-auto mr-2 text-text-secondary'>
+                          •
+                        </span>
                         <span className='  text-text-secondary capitalize'>
                           {start}
                         </span>
@@ -121,8 +124,11 @@ export default function Accordion() {
                       </div>
                     </div>
                   )}
-                  {viewportWidth > 425 && viewportWidth < 578 && (
-                    <div className=' flex gap-1 items-center text-xs'>
+                  {viewportWidth > 425 && viewportWidth < 700 && (
+                    <div className=' flex gap-1 items-center text-xs xs:text-sm'>
+                      <span className=' w-[2px] h-auto mr-2 text-text-secondary'>
+                        •
+                      </span>
                       <span className='  text-text-secondary capitalize'>
                         {type} |
                       </span>
@@ -134,7 +140,7 @@ export default function Accordion() {
                   {responsibilities.map((li, index) => {
                     return (
                       <li
-                        className=' list-none text-wrap text-xs text-text leading-5 space-x-2'
+                        className=' list-none text-wrap text-xs text-text leading-5 space-x-2 xs:text-base'
                         key={index}
                       >
                         <span className=' w-[2px] h-auto'>›</span>

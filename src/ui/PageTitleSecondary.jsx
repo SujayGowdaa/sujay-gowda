@@ -2,7 +2,7 @@
 export default function PageTitleSecondary({ title, className }) {
   return (
     <h2
-      className={` font-semibold text-center font-vietnam uppercase text-lg text-accent ${className}`}
+      className={` ${className} font-semibold text-center font-vietnam uppercase text-lg text-accent xs:text-left xs:text-xl`}
     >
       {title}
     </h2>

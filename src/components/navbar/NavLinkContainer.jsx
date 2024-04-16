@@ -97,7 +97,7 @@ export default function NavLinkContainer() {
         <ul className=' flex flex-col tracking-wider uppercase text-sm font-vietnam'>
           <li className=' w-full'>
             <NavLink
-              className={` w-full inline-block px-8 font-medium py-2 pr-16 active:text-accent duration-150 transition-all ${
+              className={` w-full inline-block px-8 xs:py-3 font-medium py-2 pr-16 active:text-accent duration-150 transition-all ${
                 active.home
                   ? ' text-accent hover:text-accent'
                   : ' text-text-secondary hover:text-text'
@@ -118,7 +118,7 @@ export default function NavLinkContainer() {
           </li>
           <li className=' w-full'>
             <NavLink
-              className={` w-full inline-block px-8 font-medium py-2 pr-16  active:text-accent duration-150 transition-all ${
+              className={` w-full inline-block px-8 xs:py-3 font-medium py-2 pr-16  active:text-accent duration-150 transition-all ${
                 active.projects
                   ? ' text-accent hover:text-accent'
                   : ' text-text-secondary hover:text-text'
@@ -139,7 +139,7 @@ export default function NavLinkContainer() {
           </li>
           <li className=' w-full'>
             <NavLink
-              className={` w-full inline-block px-8 font-medium py-2 pr-16  active:text-accent duration-150 transition-all  ${
+              className={` w-full inline-block px-8 xs:py-3 font-medium py-2 pr-16  active:text-accent duration-150 transition-all  ${
                 active.experience
                   ? ' text-accent hover:text-accent'
                   : ' text-text-secondary hover:text-text'
@@ -160,7 +160,7 @@ export default function NavLinkContainer() {
           </li>
           <li className=' w-full'>
             <NavLink
-              className={` w-full text-nowrap inline-block px-8 font-medium py-2 pr-16  active:text-accent duration-150 transition-all  ${
+              className={` w-full text-nowrap inline-block px-8 xs:py-3 font-medium py-2 pr-16  active:text-accent duration-150 transition-all  ${
                 active.qualification
                   ? ' text-accent hover:text-accent'
                   : ' text-text-secondary hover:text-text'
@@ -181,7 +181,7 @@ export default function NavLinkContainer() {
           </li>
           <li className=' w-full'>
             <NavLink
-              className={` w-full inline-block px-8 font-medium py-2 pr-16  active:text-accent duration-150 transition-all  ${
+              className={` w-full inline-block px-8 xs:py-3 font-medium py-2 pr-16  active:text-accent duration-150 transition-all  ${
                 active.about
                   ? ' text-accent hover:text-accent'
                   : ' text-text-secondary hover:text-text'
@@ -202,7 +202,7 @@ export default function NavLinkContainer() {
           </li>
           <li className=' w-full'>
             <NavLink
-              className={` w-full inline-block px-8 font-medium py-2 pr-16  active:text-accent duration-150 transition-all ${
+              className={` w-full inline-block px-8 xs:py-3 font-medium py-2 pr-16  active:text-accent duration-150 transition-all ${
                 active.contact
                   ? ' text-accent hover:text-accent'
                   : ' text-text-secondary hover:text-text'
