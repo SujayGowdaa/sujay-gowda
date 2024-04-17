@@ -53,13 +53,15 @@
   --gold-dark: var(--color-gold-dark);
 }
 
-@keyframes animate-gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
+::-moz-selection {
+  /* Code for Firefox */
+  background: var(--text);
+  color: var(--background);
+}
+
+::selection {
+  background: var(--text);
+  color: var(--background);
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

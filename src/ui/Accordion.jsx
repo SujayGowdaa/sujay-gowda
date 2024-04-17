@@ -32,7 +32,7 @@ export default function Accordion() {
             onClick={() => setIsAccordionOpen(isAccordionOpen === i ? null : i)}
           >
             <div
-              className={` group flex justify-between items-center py-4 px-4 xs:py-5 xs:px-6 ${
+              className={` group flex justify-between items-center py-4 px-4 xs:py-5 xs:px-6 md:py-6 ${
                 isAccordionOpen === i
                   ? 'border-b-[1px] border-shadow shadow-xp'
                   : 'border-y-[1px] border-shadow'
@@ -52,7 +52,7 @@ export default function Accordion() {
                   </h3>
                 </div>
               </div>
-              <div className=' flex items-center gap-4 text-xs xs:text-sm '>
+              <div className=' flex items-center gap-4 text-xs xs:text-sm md:gap-6 '>
                 {viewportWidth > 425 && viewportWidth < 700 && (
                   <>
                     <span className=' flex gap-1'>
@@ -103,7 +103,7 @@ export default function Accordion() {
 
             <div className=' flex flex-col gap-2 bg-glass backdrop-blur-custom'>
               {isAccordionOpen === i && (
-                <div className=' flex flex-col gap-2 p-4 xs:p-6 xs:gap-3'>
+                <div className=' flex flex-col gap-2 p-4 xs:p-6 xs:gap-3 md:gap-4 md:p-8'>
                   {viewportWidth < 425 && (
                     <div className=' flex gap-4 items-center text-xs flex-wrap'>
                       <span className=' flex gap-1'>

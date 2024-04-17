@@ -5,9 +5,9 @@ export const work = [
     start: 'jun 2023',
     end: 'present',
     responsibilities: [
-      'Refactor company Tower Buddy & i4sight websites',
+      'Refactor Tower Buddy & i4sight company websites',
       'Create and translate the UI design mock-ups into responsive design and scalable code from scratch using technologies like HTML, CSS, JavaScript, ReactJS library, and NPM packages',
-      'Refactor towerbuddy webapp',
+      'Refactor and implement new features as per requirements of towerbuddy web application',
       'Create designs of website, icons, logos, and slides using popular UI/UX design and editing tools like Figma, Illustrator, and Photoshop',
       'Develop and maintain better code base for collaboration and version control on GitHub',
     ],
