@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import Logo from '../../ui/Logo';
 
 export default function NavLinkContainer() {
-  const { theme, setTheme, setIsNavOpen } = useAppContext();
+  const { theme, setTheme, setIsNavOpen, setNavigation } = useAppContext();
   const [active, setActive] = useState({
     home: true,
     projects: false,
@@ -100,15 +100,16 @@ export default function NavLinkContainer() {
                   : ' text-text-secondary hover:text-text'
               }`}
               to={'/'}
-              onClick={() =>
+              onClick={() => {
+                setNavigation(1);
                 setActive({
                   projects: false,
                   experience: false,
                   qualification: false,
                   about: false,
                   home: true,
-                })
-              }
+                });
+              }}
             >
               › home
             </NavLink>
@@ -121,15 +122,16 @@ export default function NavLinkContainer() {
                   : ' text-text-secondary hover:text-text'
               }`}
               to={'/projects'}
-              onClick={() =>
+              onClick={() => {
+                setNavigation(2);
                 setActive({
                   home: false,
                   experience: false,
                   qualification: false,
                   about: false,
                   projects: true,
-                })
-              }
+                });
+              }}
             >
               › projects
             </NavLink>
@@ -142,15 +144,16 @@ export default function NavLinkContainer() {
                   : ' text-text-secondary hover:text-text'
               }`}
               to={'/experience'}
-              onClick={() =>
+              onClick={() => {
+                setNavigation(3);
                 setActive({
                   home: false,
                   projects: false,
                   qualification: false,
                   about: false,
                   experience: true,
-                })
-              }
+                });
+              }}
             >
               › experience
             </NavLink>
@@ -163,15 +166,16 @@ export default function NavLinkContainer() {
                   : ' text-text-secondary hover:text-text'
               }`}
               to={'/qualification'}
-              onClick={() =>
+              onClick={() => {
+                setNavigation(4);
                 setActive({
                   home: false,
                   projects: false,
                   experience: false,
                   about: false,
                   qualification: true,
-                })
-              }
+                });
+              }}
             >
               › qualification
             </NavLink>
@@ -184,15 +188,16 @@ export default function NavLinkContainer() {
                   : ' text-text-secondary hover:text-text'
               }`}
               to={'/about'}
-              onClick={() =>
+              onClick={() => {
+                setNavigation(5);
                 setActive({
                   home: false,
                   projects: false,
                   experience: false,
                   qualification: false,
                   about: true,
-                })
-              }
+                });
+              }}
             >
               › about
             </NavLink>
@@ -205,7 +210,8 @@ export default function NavLinkContainer() {
                   : ' text-text-secondary hover:text-text'
               }`}
               to={'/contact'}
-              onClick={() =>
+              onClick={() => {
+                setNavigation(6);
                 setActive({
                   home: false,
                   projects: false,
@@ -213,8 +219,8 @@ export default function NavLinkContainer() {
                   qualification: false,
                   about: false,
                   contact: true,
-                })
-              }
+                });
+              }}
             >
               › contact
             </NavLink>
