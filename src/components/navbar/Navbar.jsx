@@ -8,13 +8,15 @@ export default function Navbar() {
   return (
     <>
       <div
-        className={` flex max-w-min items-start fixed top-0 z-10 gap-6 transition-all duration-500 ${
-          isNavOpen ? 'right-0' : 'right-[-230px] pointer-events-none'
+        className={` flex max-w-min items-start fixed top-0 z-10 gap-6 transition-all duration-500 md:gap-10 lg:gap-12 ${
+          isNavOpen
+            ? 'right-0'
+            : 'right-[-230px] lg:right-[-246px] pointer-events-none'
         } `}
         onClick={() => setIsNavOpen(false)}
       >
         <div
-          className={` mt-6 xs:mt-8  ${
+          className={` mt-6 xs:mt-8 sm:mt-10 md:mt-12 ${
             isNavOpen && ' bg-background rounded-full shadow-custom-sm '
           }`}
         >
