@@ -13,7 +13,7 @@ export default function ProjectCard() {
         return (
           <div
             key={project.name}
-            className=' font-vietnam backdrop-blur-custom bg-glass transition-all duration-100 p-6 shadow-card outline outline-[2px] outline-background hover:outline hover:outline-[1px] hover:outline-accent hover:translate-y-[-5px] cursor-pointer 2xl:p-8'
+            className=' font-vietnam backdrop-blur-custom transition-all duration-100 p-6 shadow-card outline outline-[2px] outline-background hover:outline hover:outline-[1px] hover:outline-accent hover:translate-y-[-5px] cursor-pointer 2xl:p-8'
           >
             <div className=' pb-6 2xl:pb-8'>
               <img src={image} alt={name} />

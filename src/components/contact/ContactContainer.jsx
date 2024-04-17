@@ -25,13 +25,15 @@ export default function ContactContainer() {
         </div>
         <div className=' flex gap-6 w-full flex-wrap justify-center xs:justify-start xs:flex-row'>
           <Links
-            className={`transition-all duration-100 group text-accent bg-accent`}
+            className={` group transition-all shadow-btn-main duration-100 group text-background bg-accent hover:outline hover:outline-[1px] hover:outline-gold-light`}
           >
             let&apos;s work together
-            <TbMailUp className=' transition-all duration-75 group-hover:text-accent text-xl' />
+            <TbMailUp className=' transition-all duration-75 text-xl group-hover:text-gold-light' />
           </Links>
           <Links
-            className={' transition-all min-w-[228px]  duration-100 group'}
+            className={
+              ' transition-all  text-text min-w-[228px] duration-100 group'
+            }
           >
             download resume
             <MdOutlineFileDownload className='transition-all duration-100 text-xl group-hover:text-accent' />

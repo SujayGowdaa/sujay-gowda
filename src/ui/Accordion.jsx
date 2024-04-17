@@ -18,7 +18,7 @@ export default function Accordion() {
   }, []);
 
   return (
-    <div className=' flex flex-col font-vietnam shadow-card bg-glass backdrop-blur-custom'>
+    <div className=' flex flex-col font-vietnam shadow-card backdrop-blur-custom'>
       {work.map((xp, i) => {
         const { role, company, start, end, responsibilities, type, location } =
           xp;
