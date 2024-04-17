@@ -21,16 +21,15 @@ export default function AboutContainer() {
   return (
     <Container>
       <PageTitle title={'about'} />
-
-      <div className=' relative flex flex-col '>
-        <div className=' h-[200px] xs:h-[300px]'>
+      <div className=' lg:relative'>
+        <div className='h-[200px] xs:h-auto shadow-card'>
           <img
-            className=' h-full w-auto object-cover object-left'
+            className=' object-cover object-left h-full'
             src={banner1}
             alt='sujay gowda'
           />
         </div>
-        <p className=' text-sm font-vietnam text-text bg-glass backdrop-blur-custom shadow-card p-4 xs:text-base xs:p-6'>
+        <p className=' text-sm font-vietnam text-text bg-background backdrop-blur-custom  shadow-card p-4 xs:text-base xs:p-6 lg:outline lg:shadow-card lg:outline-[1px] lg:outline-accent lg:absolute lg:max-w-[480px] lg:top-6 lg:right-6 xl:max-w-[660px] xl:top-8 xl:right-8 '>
           I&apos;m an enthusiastic individual based in Bangalore with a passion
           for coding and continuous learning, specializing in frontend
           development to create intuitive user interfaces and bring designs to
@@ -65,11 +64,7 @@ export default function AboutContainer() {
         <img src={banner2} alt='sujay gowda' />
       </div>
       <div className=' flex flex-col gap-2 xs:gap-4'>
-        <div className=' flex gap-2 items-center justify-center xs:justify-start'>
-          <PageTitleSecondary title={'follow me'} />
-          <MdOpenInNew className=' text-xl text-accent xs:text-2xl' />
-        </div>
-        <FollowMe />
+        <FollowMe usage={'about'} />
       </div>
     </Container>
   );

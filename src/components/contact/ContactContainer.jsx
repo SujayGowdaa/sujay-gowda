@@ -5,10 +5,11 @@ import Paragraph from '../../ui/Paragraph';
 import Links from '../../ui/Links';
 import { MdOutlineFileDownload } from 'react-icons/md';
 import { TbMailUp } from 'react-icons/tb';
+import FollowMe from '../../ui/FollowMe';
 
 export default function ContactContainer() {
   return (
-    <div className=' h-screen relative'>
+    <div className=' h-screen max-w-[1600px] mx-auto flex flex-col justify-between '>
       <Container>
         <PageTitle title={'contact'} />
         <div className=' flex flex-col gap-2 xs:gap-4'>
@@ -37,13 +38,18 @@ export default function ContactContainer() {
           </Links>
         </div>
       </Container>
-      <div className=' absolute bottom-0 left-[50%] translate-x-[-50%] mb-20 flex flex-col gap-2 items-center justify-end font-vietnam  capitalize xs:left-0 xs:translate-x-0 xs:text-left xs:items-start xs:pl-8'>
-        <span className=' text-xs text-text-secondary xs:text-sm'>
-          designed & developed by
-        </span>
-        <span className=' uppercase text-sm bg-clip-text text-transparent font-semibold bg-gradient-to-r from-gold-light to-gold-dark xs:text-base '>
-          sujay gowda
-        </span>
+      <div>
+        <div className='flex flex-col gap-4 font-vietnam capitalize text-center py-6 px-4 pb-20 xs:p-8 xs:pb-24 sm:p-10 sm:pb-26 lg:p-12 lg:pb-28 xs:text-left md:flex-row md:justify-between'>
+          <FollowMe />
+          <div className='flex flex-col gap-2 font-vietnam capitalize text-center xs:text-left'>
+            <span className=' text-sm text-text-secondary xs:text-base'>
+              designed & developed by
+            </span>
+            <span className=' text-xs font-semibold text-center font-vietnam uppercase xs:text-left bg-clip-text text-transparent bg-gradient-to-r from-gold-light to-gold-dark xs:text-base '>
+              sujay gowda
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   );

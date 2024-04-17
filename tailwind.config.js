@@ -37,6 +37,7 @@ export default {
       },
       padding: {
         26: '104px',
+        28: '112px',
       },
     },
   },
