@@ -35,6 +35,9 @@ export default {
         card: ' 0px 0px 6px 3px var(--shadow)',
         xp: ' 0px 8px 4px -4px var(--shadow)',
       },
+      padding: {
+        26: '104px',
+      },
     },
   },
   plugins: [],

@@ -38,7 +38,7 @@ export default function Accordion() {
                   : 'border-y-[1px] border-shadow'
               }`}
             >
-              <div className=' flex items-center'>
+              <div className=' group flex items-center'>
                 <div className=' flex flex-col gap-2 '>
                   <h2
                     className={` font-vietnam font-medium capitalize text-sm group-hover:text-accent xs:text-base  ${
@@ -92,7 +92,11 @@ export default function Accordion() {
                     isAccordionOpen === i ? ' rotate-180' : 'rotate-0'
                   }`}
                 >
-                  <IoIosArrowDown className=' text-text xs:text-xl' />
+                  <IoIosArrowDown
+                    className={` group-hover:text-accent xs:text-xl ${
+                      isAccordionOpen === i ? 'text-accent' : 'text-text'
+                    }`}
+                  />
                 </span>
               </div>
             </div>

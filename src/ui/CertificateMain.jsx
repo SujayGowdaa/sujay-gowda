@@ -2,13 +2,13 @@ import { qualifications } from '../qualification';
 
 export default function CertificateMain() {
   return (
-    <div className=' flex flex-col w-full items-center basis-full gap-6 xs:items-start xs:w-full xs:flex-row xs:flex-wrap xs:self-stretch '>
+    <div className=' grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 2xl:grco3'>
       {qualifications[0].main.map((qualification, i) => {
         const { course, institue, duration } = qualification;
 
         return (
           <div
-            className=' max-w-[400px] w-full xs:w-full outline outline-accent font-vietnam capitalize p-4 outline-[1px] backdrop-blur-custom shadow-card gap-4 flex flex-col xs:self-stretch xs:justify-between'
+            className='outline outline-accent font-vietnam capitalize p-4 outline-[1px] backdrop-blur-custom shadow-card gap-4 flex flex-col xs:justify-between'
             key={i}
           >
             <h3 className=' text-sm text-text font-semibold xs:text-base'>

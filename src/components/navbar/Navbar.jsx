@@ -13,7 +13,11 @@ export default function Navbar() {
         } `}
         onClick={() => setIsNavOpen(false)}
       >
-        <div className=' mt-6 xs:mt-8 '>
+        <div
+          className={` mt-6 xs:mt-8  ${
+            isNavOpen && ' bg-background rounded-full shadow-custom-sm '
+          }`}
+        >
           <Button type='circle' onClick={() => setIsNavOpen(!isNavOpen)} />
         </div>
         <NavLinkContainer />

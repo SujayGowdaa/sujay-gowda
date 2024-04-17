@@ -7,13 +7,13 @@ export default function Certificate() {
   const [isCertificateHover, setIsCertificateHover] = useState(null);
 
   return (
-    <div className=' flex justify-center flex-wrap gap-6 xs:justify-start '>
+    <div className=' grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3 2xl:grid-cols-4'>
       {qualifications[1].certificates.map((certificate) => {
         const { course, issuedAt, issuedBy, id, link } = certificate;
 
         return (
           <div
-            className='relative transition-all basis-full duration-300 max-w-[320px] xs:items-stretch w-full self-stretch xs:max-w-[360px]'
+            className='relative transition-all basis-full duration-300 '
             key={id}
             onMouseEnter={() => setIsCertificateHover(id)}
             onMouseLeave={() => setIsCertificateHover(null)}

@@ -23,7 +23,9 @@ export default function ContactContainer() {
           </Paragraph>
         </div>
         <div className=' flex gap-6 w-full flex-wrap justify-center xs:justify-start xs:flex-row'>
-          <Links className={`transition-all duration-100 group text-accent `}>
+          <Links
+            className={`transition-all duration-100 group text-accent bg-accent`}
+          >
             let&apos;s work together
             <TbMailUp className=' transition-all duration-75 group-hover:text-accent text-xl' />
           </Links>

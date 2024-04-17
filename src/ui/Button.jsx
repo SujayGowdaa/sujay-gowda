@@ -18,7 +18,7 @@ export default function Button({ type, onClick, position, className }) {
       >
         <IoIosArrowForward
           className={` group-hover:fill-accent fill-text transition-all duration-100 ${
-            isNavOpen && !position ? 'rotate-180' : ' rotate-0'
+            isNavOpen && !position ? 'rotate-180 fill-accent' : ' rotate-0'
           } ${position === 'left' && ' rotate-180'}`}
         />
       </button>
