@@ -8,7 +8,6 @@ import Skills from '../../ui/Skills';
 import { skills } from '../../skills';
 import Paragraph from '../../ui/Paragraph';
 import FollowMe from '../../ui/FollowMe';
-import { MdOpenInNew } from 'react-icons/md';
 
 const {
   skillOne: { field: skillOneField },
