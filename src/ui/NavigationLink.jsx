@@ -156,8 +156,13 @@ export default function NavigationLink({ title, to }) {
   }, [pathName]);
 
   return (
+<<<<<<< HEAD
     <motion.NavLink
       className={`w-full gap-2 flex text-nowrap px-8 xs:py-3 font-medium py-2 pr-16 xl:py-4 active:text-accent xl:gap-3 ${
+=======
+    <NavLink
+      className={` w-full gap-1 flex text-nowrap px-8 xs:py-3 font-medium py-2 pr-16 xl:py-4  active:text-accent duration-200 transition-all xl:gap-2 ${
+>>>>>>> 39a3efb6f015ff62246e952d1d394056cfdf804e
         active[title]
           ? 'text-accent hover:text-accent'
           : 'text-text-secondary hover:text-text'
@@ -167,6 +172,7 @@ export default function NavigationLink({ title, to }) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
+<<<<<<< HEAD
       <motion.span
         initial={{
           x: 0,
@@ -186,5 +192,10 @@ export default function NavigationLink({ title, to }) {
       </motion.span>
       {title}
     </motion.NavLink>
+=======
+      <span>›</span>
+      {title}
+    </NavLink>
+>>>>>>> 39a3efb6f015ff62246e952d1d394056cfdf804e
   );
 }
