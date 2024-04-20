@@ -1,4 +1,4 @@
-import Accordion from '../../ui/Accordion';
+import Accordion from './Accordion';
 import PageTitle from '../../ui/PageTitle';
 import Container from '../../ui/Container';
 
