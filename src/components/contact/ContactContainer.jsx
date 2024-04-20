@@ -31,7 +31,7 @@ export default function ContactContainer() {
       <Container>
         <PageTitle title={'contact'} />
         <motion.div
-          className=' flex flex-col gap-2 xs:gap-4'
+          className=' flex flex-col gap-2 xs:gap-3'
           initial={{
             y: 40,
             opacity: 0,
@@ -74,20 +74,32 @@ export default function ContactContainer() {
             },
           }}
         >
-          <Links
-            className={` group transition-all shadow-btn-main duration-100 group text-background bg-accent hover:outline hover:outline-[1px] hover:outline-gold-light`}
+          <motion.span
+            whileHover={{
+              y: -4,
+            }}
           >
-            let&apos;s work together
-            <TbMailUp className=' transition-all duration-75 text-xl group-hover:text-gold-light' />
-          </Links>
-          <Links
-            className={
-              ' transition-all  text-text min-w-[228px] duration-100 group'
-            }
+            <Links
+              className={` group bg-gradient-to-r from-gold-light to-gold-dark transition-all duration-100 shadow-btn-main text-background hover:outline hover:outline-[1px] hover:outline-accent`}
+            >
+              let&apos;s work together
+              <TbMailUp className=' transition-all duration-100 text-xl group-hover:text-text' />
+            </Links>
+          </motion.span>
+          <motion.span
+            whileHover={{
+              y: -4,
+            }}
           >
-            download resume
-            <MdOutlineFileDownload className='transition-all duration-100 text-xl group-hover:text-accent' />
-          </Links>
+            <Links
+              className={
+                ' transition-all duration-100  text-text min-w-[228px] group'
+              }
+            >
+              download resume
+              <MdOutlineFileDownload className='transition-all text-xl group-hover:text-accent' />
+            </Links>
+          </motion.span>
         </motion.div>
       </Container>
       <div>

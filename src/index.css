@@ -39,6 +39,7 @@
   --glass: var(--color-glass-light);
   --gold-light: var(--color-gold-light);
   --gold-dark: var(--color-gold-dark);
+  --gold-secondary: var(--color-gold-dark);
 }
 
 .theme-dark {
@@ -51,6 +52,7 @@
   --glass: var(--color-glass-dark);
   --gold-light: var(--color-gold-light);
   --gold-dark: var(--color-gold-dark);
+  --gold-secondary: var(--color-gold-light);
 }
 
 ::-moz-selection {

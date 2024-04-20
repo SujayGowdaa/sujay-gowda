@@ -30,20 +30,20 @@ export default function FollowMe({ usage }) {
             <motion.span
               key={name}
               whileHover={{
-                y: -3,
+                y: -4,
+                transition: {
+                  duration: 0.1,
+                  type: 'just',
+                },
               }}
               initial={{
                 y: 10,
                 opacity: 0,
-                transition: {
-                  staggerChild: 0.3,
-                },
               }}
               whileInView={{
                 y: 0,
                 opacity: 1,
                 transition: {
-                  duration: 0.3,
                   delay: 0.1 * i,
                 },
               }}

@@ -17,7 +17,7 @@ export default function Button({
       <motion.button
         className={` ${className} hover:shadow-btn  hover:bg-background group p-2 pointer-events-auto rounded-full outline outline-1 outline-shadow flex justify-center items-center ${
           position && '  active:shadow-btn-active backdrop-blur-custom '
-        } ${disable && ' cursor-not-allowed'}`}
+        } ${disable && ' cursor-not-allowed hover:shadow-none'}`}
         animate={
           !position && {
             rotate: isNavOpen ? 0 : 180,

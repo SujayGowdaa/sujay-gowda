@@ -25,6 +25,7 @@ export default {
         'text-secondary': 'var(--text-secondary)',
         'gold-light': 'var(--gold-light)',
         'gold-dark': 'var(--gold-dark)',
+        'gold-secondary': 'var(--gold-secondary)',
         shadow: 'var(--shadow)',
       },
       boxShadow: {
