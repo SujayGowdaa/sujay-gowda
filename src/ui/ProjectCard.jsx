@@ -44,19 +44,10 @@ export default function ProjectCard() {
             key={project.name}
             className=' font-vietnam backdrop-blur-custom p-6 shadow-card outline outline-[2px] outline-background hover:outline hover:outline-[1px] cursor-pointer 2xl:p-8'
             variants={card}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9f829790216541b8113ef0795f85db7ce084af4f
             whileHover={{
               outline: '1px solid var(--accent)',
               y: -10,
             }}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 39a3efb6f015ff62246e952d1d394056cfdf804e
->>>>>>> 9f829790216541b8113ef0795f85db7ce084af4f
           >
             <div className=' pb-6 2xl:pb-8'>
               <img src={image} alt={name} />

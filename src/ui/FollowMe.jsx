@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { socialMedia } from '../socialMedia';
 import PageTitleSecondary from './PageTitleSecondary';
 import { MdOpenInNew } from 'react-icons/md';
+import { motion } from 'framer-motion';
 
 export default function FollowMe({ usage }) {
   return (
@@ -21,19 +22,25 @@ export default function FollowMe({ usage }) {
           </div>
         )}
       </div>
-      <div className=' flex gap-2 gap-y-1 justify-center flex-wrap xs:justify-start xs:gap-4'>
+      <div className=' flex gap-2 gap-y-1 justify-center flex-wrap xs:justify-start xs:gap-4 lg:gap-6'>
         {socialMedia.map((media) => {
           const { name, link } = media;
 
           return (
-            <Link
+            <motion.span
               key={name}
-              className=' text-text font-vietnam text-sm capitalize hover:text-accent xs:text-base'
-              to={link}
-              target='_blank'
+              whileHover={{
+                y: -3,
+              }}
             >
-              {name}
-            </Link>
+              <Link
+                className=' text-text font-vietnam text-sm capitalize hover:text-accent xs:text-base'
+                to={link}
+                target='_blank'
+              >
+                {name}
+              </Link>
+            </motion.span>
           );
         })}
       </div>

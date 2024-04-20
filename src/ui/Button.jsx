@@ -15,9 +15,8 @@ export default function Button({
   if (type === 'circle')
     return (
       <motion.button
-        className={` ${className} hover:bg-background group p-2 pointer-events-auto rounded-full outline outline-1 outline-shadow flex justify-center items-center ${
-          position &&
-          ' transition-all duration-100 hover:shadow-btn active:shadow-btn-active backdrop-blur-custom '
+        className={` ${className} hover:shadow-btn  hover:bg-background group p-2 pointer-events-auto rounded-full outline outline-1 outline-shadow flex justify-center items-center ${
+          position && '  active:shadow-btn-active backdrop-blur-custom '
         } ${disable && ' cursor-not-allowed'}`}
         animate={
           !position && {
@@ -28,9 +27,13 @@ export default function Button({
           }
         }
         whileHover={{
-          scale: 1.1,
+          x: position === 'left' ? [2, -2] : [-2, 2],
           transition: {
-            duration: 0.1,
+            repeat: Infinity,
+            delay: 0.1,
+            repeatType: 'mirror',
+            duration: 0.3,
+            ease: 'easeOut',
           },
         }}
         disabled={disable}
@@ -39,13 +42,20 @@ export default function Button({
           onClick?.();
         }}
       >
-        <IoIosArrowForward
-          className={` fill-text group-hover:fill-text  ${
-            position === 'left' && ' rotate-180'
-          } ${position === 'right' && ' rotate-0'} ${
-            position && ' text-text-secondary'
-          }`}
-        />
+        <motion.span
+          initial={{
+            x: 0,
+          }}
+          whileHover={{}}
+        >
+          <IoIosArrowForward
+            className={` fill-text-secondary group-hover:fill-text  ${
+              position === 'left' && ' rotate-180'
+            } ${position === 'right' && ' rotate-0'} ${
+              position && ' text-text-secondary'
+            }`}
+          />
+        </motion.span>
       </motion.button>
     );
 }

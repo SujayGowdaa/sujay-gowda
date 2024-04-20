@@ -9,15 +9,7 @@ export default function NavLinkContainer() {
 
   const navLink = {
     animate: {
-<<<<<<< HEAD
       scale: 1.01,
-=======
-<<<<<<< HEAD
-      scale: 1.01,
-=======
-      scale: 1.02,
->>>>>>> 39a3efb6f015ff62246e952d1d394056cfdf804e
->>>>>>> 9f829790216541b8113ef0795f85db7ce084af4f
       originX: -2,
       originY: 0,
       transition: {
@@ -28,28 +20,12 @@ export default function NavLinkContainer() {
   };
 
   return (
-<<<<<<< HEAD
     <motion.header className='justify-center bg-glass shadow-custom-sm select-none border-l-2 border-background backdrop-blur-custom h-screen flex flex-col gap-6 xl:gap-10'>
-=======
-<<<<<<< HEAD
-    <motion.header className='justify-center bg-glass shadow-custom-sm select-none border-l-2 border-background backdrop-blur-custom h-screen flex flex-col gap-6 xl:gap-10'>
-=======
-    <header className='justify-center bg-glass shadow-custom-sm select-none border-l-2 border-background backdrop-blur-custom h-screen flex flex-col gap-6 xl:gap-8'>
->>>>>>> 39a3efb6f015ff62246e952d1d394056cfdf804e
->>>>>>> 9f829790216541b8113ef0795f85db7ce084af4f
       <div className=' px-8'>
         <Logo width={' w-[60px]'} />
       </div>
       <nav onClick={() => setIsNavOpen(false)}>
-<<<<<<< HEAD
         <ul className=' flex flex-col tracking-wider uppercase text-sm font-vietnam xl:text-base'>
-=======
-<<<<<<< HEAD
-        <ul className=' flex flex-col tracking-wider uppercase text-sm font-vietnam xl:text-base'>
-=======
-        <ul className=' flex flex-col tracking-wider uppercase text-sm font-vietnam xl:text-lg'>
->>>>>>> 39a3efb6f015ff62246e952d1d394056cfdf804e
->>>>>>> 9f829790216541b8113ef0795f85db7ce084af4f
           <motion.li variants={navLink} whileHover={'animate'}>
             <NavigationLink title={'home'} to={'/'} />
           </motion.li>
@@ -71,14 +47,6 @@ export default function NavLinkContainer() {
         </ul>
       </nav>
       <ThemeButton />
-<<<<<<< HEAD
     </motion.header>
-=======
-<<<<<<< HEAD
-    </motion.header>
-=======
-    </header>
->>>>>>> 39a3efb6f015ff62246e952d1d394056cfdf804e
->>>>>>> 9f829790216541b8113ef0795f85db7ce084af4f
   );
 }

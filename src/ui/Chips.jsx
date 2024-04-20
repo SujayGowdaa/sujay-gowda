@@ -1,12 +1,5 @@
 /* eslint-disable react/prop-types */
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
-=======
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-=======
->>>>>>> 39a3efb6f015ff62246e952d1d394056cfdf804e
->>>>>>> 9f829790216541b8113ef0795f85db7ce084af4f
 
 export default function Chips({ skills, title, center }) {
   return (
