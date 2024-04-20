@@ -27,7 +27,7 @@ export default function Accordion() {
       y: 0,
       height: 'auto',
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.1,
         when: 'beforeChildren',
       },
     },

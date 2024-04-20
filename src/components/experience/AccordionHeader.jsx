@@ -29,7 +29,7 @@ export default function AccordionHeader({
           <h2
             className={` ${
               isAccordionOpen === i ? ' text-accent' : 'text-text'
-            }  transition-colors duration-300 font-vietnam font-medium capitalize text-sm group-hover:text-accent xs:text-base `}
+            }  transition-colors duration-300 font-vietnam font-semibold capitalize text-sm group-hover:text-accent xs:text-base `}
           >
             {role}
           </h2>

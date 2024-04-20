@@ -27,7 +27,9 @@ export default function Button({
           }
         }
         whileHover={{
-          x: position === 'left' ? [2, -2] : [-2, 2],
+          x:
+            (position === 'left' && [2, -4]) ||
+            (position === 'right' && [-2, 4]),
           transition: {
             repeat: Infinity,
             delay: 0.1,
@@ -42,20 +44,15 @@ export default function Button({
           onClick?.();
         }}
       >
-        <motion.span
-          initial={{
-            x: 0,
-          }}
-          whileHover={{}}
-        >
+        <span>
           <IoIosArrowForward
-            className={` fill-text-secondary group-hover:fill-text  ${
+            className={` fill-text group-hover:fill-text  ${
               position === 'left' && ' rotate-180'
             } ${position === 'right' && ' rotate-0'} ${
               position && ' text-text-secondary'
             }`}
           />
-        </motion.span>
+        </span>
       </motion.button>
     );
 }

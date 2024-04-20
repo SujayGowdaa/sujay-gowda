@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Chips from './Chips';
 import { motion } from 'framer-motion';
 
-const cardVariant = {
+const parent = {
   hidden: {
     opacity: 0,
   },
@@ -17,7 +17,7 @@ const cardVariant = {
   },
 };
 
-const card = {
+const child = {
   hidden: {
     y: 60,
     opacity: 0,
@@ -32,7 +32,7 @@ export default function ProjectCard() {
   return (
     <motion.div
       className=' grid grid-cols-1 gap-6 sm:grid-cols-2 xs:gap-8 lg:grid-cols-3 lg:gap-10 xl:gap-12 '
-      variants={cardVariant}
+      variants={parent}
       initial='hidden'
       animate='show'
     >
@@ -43,7 +43,7 @@ export default function ProjectCard() {
           <motion.div
             key={project.name}
             className=' font-vietnam backdrop-blur-custom p-6 shadow-card outline outline-[2px] outline-background hover:outline hover:outline-[1px] cursor-pointer 2xl:p-8'
-            variants={card}
+            variants={child}
             whileHover={{
               outline: '1px solid var(--accent)',
               y: -10,
@@ -89,11 +89,7 @@ export default function ProjectCard() {
                   {description}
                 </p>
               </div>
-              <Chips
-                skills={skills}
-                title={'tech stack'}
-                cardVariant={cardVariant}
-              />
+              <Chips skills={skills} title={'tech stack'} cardVariant={child} />
             </div>
           </motion.div>
         );
