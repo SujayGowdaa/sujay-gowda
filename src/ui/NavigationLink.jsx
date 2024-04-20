@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useAppContext } from '../store/AppContext';
+import { delay, motion } from 'framer-motion';
 
 export default function NavigationLink({ title, to }) {
   const { setNavigation } = useAppContext();
@@ -15,6 +16,7 @@ export default function NavigationLink({ title, to }) {
   });
   const location = useLocation();
   const pathName = location.pathname;
+  const [isHovered, setIsHovered] = useState(false);
 
   function handleNavClick(navLink) {
     if (navLink === 'home') {
@@ -154,16 +156,35 @@ export default function NavigationLink({ title, to }) {
   }, [pathName]);
 
   return (
-    <NavLink
-      className={` w-full text-nowrap inline-block px-8 xs:py-3 font-medium py-2 pr-16 lg:py-4  active:text-accent duration-150 transition-all ${
+    <motion.NavLink
+      className={`w-full gap-2 flex text-nowrap px-8 xs:py-3 font-medium py-2 pr-16 xl:py-4 active:text-accent xl:gap-3 ${
         active[title]
-          ? ' text-accent hover:text-accent'
-          : ' text-text-secondary hover:text-text'
+          ? 'text-accent hover:text-accent'
+          : 'text-text-secondary hover:text-text'
       }`}
       to={to}
       onClick={() => handleNavClick(title)}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      › {title}
-    </NavLink>
+      <motion.span
+        initial={{
+          x: 0,
+        }}
+        animate={{
+          x: isHovered && [2, -2],
+          transition: {
+            repeat: Infinity,
+            delay: 0.1,
+            repeatType: 'mirror',
+            duration: 0.3,
+            ease: 'easeOut',
+          },
+        }}
+      >
+        ›
+      </motion.span>
+      {title}
+    </motion.NavLink>
   );
 }

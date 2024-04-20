@@ -1,4 +1,6 @@
 /* eslint-disable react/prop-types */
+import { motion } from 'framer-motion';
+
 export default function Chips({ skills, title, center }) {
   return (
     <div
@@ -16,12 +18,15 @@ export default function Chips({ skills, title, center }) {
       >
         {skills.map((skill) => {
           return (
-            <span
+            <motion.span
               key={skill}
               className=' text-nowrap inline-block text-[10px] outline outline-[1px] outline-shadow text-text font-light px-[10px] py-[3px] capitalize md:text-xs 2xl:text-sm 2xl:px-3 2xl:py-1 backdrop-blur-custom'
+              whileHover={{
+                y: -3,
+              }}
             >
               {skill}
-            </span>
+            </motion.span>
           );
         })}
       </div>
