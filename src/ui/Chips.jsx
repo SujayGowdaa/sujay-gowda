@@ -3,10 +3,24 @@ import { motion } from 'framer-motion';
 
 export default function Chips({ skills, title, center }) {
   return (
-    <div
+    <motion.div
       className={` flex flex-col gap-2 2xl:gap-4 ${
         center && 'justify-center text-center xs:text-left xs:justify-start'
       }`}
+      initial={{
+        y: 40,
+        opacity: 0,
+        transition: {
+          staggerChild: 0.3,
+        },
+      }}
+      whileInView={{
+        y: 0,
+        opacity: 1,
+        transition: {
+          duration: 0.3,
+        },
+      }}
     >
       <h4 className=' capitalize text-sm text-text-secondary md:text-base 2xl:text-lg'>
         {title}
@@ -16,7 +30,7 @@ export default function Chips({ skills, title, center }) {
           center && 'justify-center xs:justify-start'
         }`}
       >
-        {skills.map((skill) => {
+        {skills.map((skill, i) => {
           return (
             <motion.span
               key={skill}
@@ -24,12 +38,27 @@ export default function Chips({ skills, title, center }) {
               whileHover={{
                 y: -3,
               }}
+              initial={{
+                y: 20,
+                opacity: 0,
+                transition: {
+                  staggerChild: 0.3,
+                },
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+                transition: {
+                  duration: 0.3,
+                  delay: 0.1 * i,
+                },
+              }}
             >
               {skill}
             </motion.span>
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 }

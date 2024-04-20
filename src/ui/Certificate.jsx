@@ -7,37 +7,8 @@ import { Link } from 'react-router-dom';
 export default function Certificate() {
   const [isCertificateHover, setIsCertificateHover] = useState(null);
 
-  const parent = {
-    hidden: {
-      opacity: 0,
-    },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        when: 'beforeChildren',
-      },
-    },
-  };
-
-  const child = {
-    hidden: {
-      y: 40,
-      opacity: 0,
-    },
-    show: {
-      y: 0,
-      opacity: 1,
-    },
-  };
-
   return (
-    <motion.div
-      className=' grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3 2xl:grid-cols-4'
-      variants={parent}
-      initial='hidden'
-      animate='show'
-    >
+    <div className=' grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3 2xl:grid-cols-4'>
       {qualifications[1].certificates.map((certificate) => {
         const { course, issuedAt, issuedBy, id, link } = certificate;
 
@@ -47,7 +18,20 @@ export default function Certificate() {
             key={id}
             onMouseEnter={() => setIsCertificateHover(id)}
             onMouseLeave={() => setIsCertificateHover(null)}
-            variants={child}
+            initial={{
+              y: 40,
+              opacity: 0,
+              transition: {
+                staggerChild: 0.3,
+              },
+            }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+              transition: {
+                duration: 0.3,
+              },
+            }}
           >
             <Link to={link} target='_blank' className=' overflow-hidden'>
               <AnimatePresence>
@@ -104,6 +88,6 @@ export default function Certificate() {
           </motion.div>
         );
       })}
-    </motion.div>
+    </div>
   );
 }

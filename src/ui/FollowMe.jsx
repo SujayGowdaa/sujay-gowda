@@ -23,7 +23,7 @@ export default function FollowMe({ usage }) {
         )}
       </div>
       <div className=' flex gap-2 gap-y-1 justify-center flex-wrap xs:justify-start xs:gap-4 lg:gap-6'>
-        {socialMedia.map((media) => {
+        {socialMedia.map((media, i) => {
           const { name, link } = media;
 
           return (
@@ -31,6 +31,21 @@ export default function FollowMe({ usage }) {
               key={name}
               whileHover={{
                 y: -3,
+              }}
+              initial={{
+                y: 10,
+                opacity: 0,
+                transition: {
+                  staggerChild: 0.3,
+                },
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+                transition: {
+                  duration: 0.3,
+                  delay: 0.1 * i,
+                },
               }}
             >
               <Link

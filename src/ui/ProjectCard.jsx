@@ -2,29 +2,22 @@ import { FiGithub } from 'react-icons/fi';
 import { MdOutlineOpenInNew } from 'react-icons/md';
 import { projects } from '../projectData';
 import { Link } from 'react-router-dom';
-import Chips from './Chips';
 import { motion } from 'framer-motion';
+
+import ProjectChips from './ProjectChips';
 
 const parent = {
   hidden: {
     opacity: 0,
+    y: 40,
   },
   show: {
     opacity: 1,
+    y: 0,
     transition: {
       staggerChildren: 0.1,
+      duration: 0.3,
     },
-  },
-};
-
-const child = {
-  hidden: {
-    y: 60,
-    opacity: 0,
-  },
-  show: {
-    y: 0,
-    opacity: 1,
   },
 };
 
@@ -43,7 +36,17 @@ export default function ProjectCard() {
           <motion.div
             key={project.name}
             className=' font-vietnam backdrop-blur-custom p-6 shadow-card outline outline-[2px] outline-background hover:outline hover:outline-[1px] cursor-pointer 2xl:p-8'
-            variants={child}
+            initial={{
+              y: 40,
+              opacity: 0,
+            }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+              transition: {
+                duration: 0.3,
+              },
+            }}
             whileHover={{
               outline: '1px solid var(--accent)',
               y: -10,
@@ -60,6 +63,7 @@ export default function ProjectCard() {
                   </h3>
                   <div className=' flex gap-2 text-text-secondary text-xl md:text-2xl 2xl:gap-4 2xl:text-3xl'>
                     <motion.span
+                      className=' hover:text-text transition-colors duration-300'
                       whileHover={{
                         y: -3,
                       }}
@@ -69,6 +73,7 @@ export default function ProjectCard() {
                       </Link>
                     </motion.span>
                     <motion.span
+                      className=' hover:text-text transition-colors duration-300'
                       whileHover={{
                         y: -3,
                       }}
@@ -89,7 +94,7 @@ export default function ProjectCard() {
                   {description}
                 </p>
               </div>
-              <Chips skills={skills} title={'tech stack'} cardVariant={child} />
+              <ProjectChips skills={skills} title={'tech stack'} />
             </div>
           </motion.div>
         );

@@ -39,6 +39,7 @@ export default function AppLayout() {
       default:
         break;
     }
+    window.scrollTo({ top: 0 });
   }, [navigation, navigate]);
 
   if (isLoading)
