@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+
 export default function Chips({ skills, title, center }) {
   return (
     <div

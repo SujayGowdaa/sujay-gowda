@@ -155,7 +155,7 @@ export default function NavigationLink({ title, to }) {
 
   return (
     <NavLink
-      className={` w-full text-nowrap inline-block px-8 xs:py-3 font-medium py-2 pr-16 lg:py-4  active:text-accent duration-150 transition-all ${
+      className={` w-full gap-1 flex text-nowrap px-8 xs:py-3 font-medium py-2 pr-16 xl:py-4  active:text-accent duration-200 transition-all xl:gap-2 ${
         active[title]
           ? ' text-accent hover:text-accent'
           : ' text-text-secondary hover:text-text'
@@ -163,7 +163,8 @@ export default function NavigationLink({ title, to }) {
       to={to}
       onClick={() => handleNavClick(title)}
     >
-      › {title}
+      <span>›</span>
+      {title}
     </NavLink>
   );
 }
