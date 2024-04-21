@@ -1,15 +1,37 @@
 import Logo from '../../ui/Logo';
+import useViewPort from '../../utils/useViewPort';
 import Title from './Title';
 import { motion } from 'framer-motion';
 
 export default function LandingPage() {
+  const { viewportWidth } = useViewPort();
+
+  console.log(viewportWidth);
   return (
     <div className=' text-center flex justify-center items-center flex-col gap-4 xs:flex-row xs:text-left'>
       <motion.span
-        // initial={{ opacity: 0, scale: 0.8 }}
-        // animate={{ opacity: 1, scale: 1 }
-        initial={{ opacity: 0, x: -100 }}
-        animate={{ opacity: 1, x: 0 }}
+        initial={
+          viewportWidth < 480
+            ? {
+                opacity: 0,
+                y: -100,
+              }
+            : {
+                opacity: 0,
+                x: -100,
+              }
+        }
+        animate={
+          viewportWidth < 480
+            ? {
+                opacity: 1,
+                y: 0,
+              }
+            : {
+                opacity: 1,
+                x: 0,
+              }
+        }
         transition={{
           duration: 0.3,
         }}
@@ -17,10 +39,28 @@ export default function LandingPage() {
         <Logo width={'w-[80px] md:w-[100px]'} />
       </motion.span>
       <motion.span
-        // initial={{ opacity: 0, scale: 0.8 }}
-        // animate={{ opacity: 1, scale: 1 }}
-        initial={{ opacity: 0, x: 100 }}
-        animate={{ opacity: 1, x: 0 }}
+        initial={
+          viewportWidth < 480
+            ? {
+                opacity: 0,
+                y: 100,
+              }
+            : {
+                opacity: 0,
+                x: 100,
+              }
+        }
+        animate={
+          viewportWidth < 480
+            ? {
+                opacity: 1,
+                y: 0,
+              }
+            : {
+                opacity: 1,
+                x: 0,
+              }
+        }
         transition={{
           duration: 0.3,
         }}

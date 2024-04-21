@@ -1,24 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { work } from '../../workExperience';
 import { motion } from 'framer-motion';
 
 import AccordionHeader from './AccordionHeader';
 import AccordionContent from './AccordionContent';
+import useViewPort from '../../utils/useViewPort';
 
 export default function Accordion() {
   const [isAccordionOpen, setIsAccordionOpen] = useState(null);
-  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    function handleResize() {
-      setViewportWidth(window.innerWidth);
-    }
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  const { viewportWidth } = useViewPort();
 
   const container = {
     hidden: { opacity: 0, y: 50, height: 0 },

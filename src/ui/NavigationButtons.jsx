@@ -8,8 +8,8 @@ export default function NavigationButtons() {
   return (
     <div className=' fixed justify-center bottom-0 z-[5]  pointer-events-none flex gap-4 w-full p-4 xs:p-6'>
       <motion.span
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.3 }}
       >
         <Button
@@ -23,8 +23,8 @@ export default function NavigationButtons() {
         />
       </motion.span>
       <motion.span
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.3 }}
       >
         <Button
