@@ -1,5 +1,7 @@
-import frontendFusion from './assets/projectCover/project1.png';
-import cheffest from './assets/projectCover/project2.png';
+import frontendFusion from './assets/projectCover/frontend-fusion.png';
+import cheffest from './assets/projectCover/cheffest.png';
+import towerBuddy from './assets/projectCover/towerbuddy.png';
+import i4sight from './assets/projectCover/i4sight.png';
 
 export const projects = [
   {
@@ -8,30 +10,12 @@ export const projects = [
     projectLink: 'https://cheffest.netlify.app/',
     githubLink: 'https://github.com/SujayGowdaa/cheffest',
     description:
-      'Full stack complete responsive web application, the food ordering app',
+      'Cheffest is a food ordering app where users can order for food. The remote state of the application is managed with react query and the form validation using react hook form. The backend is powered by supabase.',
     skills: [
       'html',
       'css',
       'javaScript',
-      'react javaScript',
-      'react hook form',
-      'react query',
-      'tailwind css',
-      'supabase',
-    ],
-  },
-  {
-    name: 'cheffest',
-    image: cheffest,
-    projectLink: 'https://cheffest.netlify.app/',
-    githubLink: 'https://github.com/SujayGowdaa/cheffest',
-    description:
-      'Full stack complete responsive web application, the food ordering app',
-    skills: [
-      'html',
-      'css',
-      'javaScript',
-      'react javaScript',
+      'react',
       'react hook form',
       'react query',
       'tailwind css',
@@ -44,43 +28,25 @@ export const projects = [
     projectLink: 'https://frontend-fusion.netlify.app/',
     githubLink: 'https://github.com/SujayGowdaa/front-end-fusion',
     description:
-      'Quiz app frontend application. Application state powered with redux and react context hooks.',
-    skills: ['html', 'css', 'javaScript', 'react javaScript', 'redux'],
+      'Frontend Fusion is a frontend application that functions essentially as a quiz app, allowing users to customise the topic and difficulty level to suit their interests. Redux is utilised to manage the application state.',
+    skills: ['html', 'css', 'javaScript', 'react', 'redux'],
   },
   {
-    name: 'frontend fusion',
-    image: frontendFusion,
-    projectLink: 'https://frontend-fusion.netlify.app/',
-    githubLink: 'https://github.com/SujayGowdaa/front-end-fusion',
+    name: 'tower buddy',
+    image: towerBuddy,
+    projectLink: 'https://towerbuddy.tel/',
+    githubLink: '',
     description:
-      'Quiz app frontend application. Application state powered with redux and react context hooks.',
-    skills: ['html', 'css', 'javaScript', 'react javaScript', 'redux'],
+      'TowerBuddy provides the landowners a platform to list the available property, increasing the chances of the property being monetized at optimum rate.',
+    skills: ['html', 'css', 'javaScript', 'react', 'email JS'],
   },
   {
-    name: 'frontend fusion',
-    image: frontendFusion,
-    projectLink: 'https://frontend-fusion.netlify.app/',
-    githubLink: 'https://github.com/SujayGowdaa/front-end-fusion',
+    name: 'i4Sight',
+    image: i4sight,
+    projectLink: 'https://www.i4sight.net/',
+    githubLink: '',
     description:
-      'Quiz app frontend application. Application state powered with redux and react context hooks.',
-    skills: ['html', 'css', 'javaScript', 'react javaScript', 'redux'],
-  },
-  {
-    name: 'frontend fusion',
-    image: frontendFusion,
-    projectLink: 'https://frontend-fusion.netlify.app/',
-    githubLink: 'https://github.com/SujayGowdaa/front-end-fusion',
-    description:
-      'Quiz app frontend application. Application state powered with redux and react context hooks.',
-    skills: ['html', 'css', 'javaScript', 'react javaScript', 'redux'],
-  },
-  {
-    name: 'frontend fusion',
-    image: frontendFusion,
-    projectLink: 'https://frontend-fusion.netlify.app/',
-    githubLink: 'https://github.com/SujayGowdaa/front-end-fusion',
-    description:
-      'Quiz app frontend application. Application state powered with redux and react context hooks.',
-    skills: ['html', 'css', 'javaScript', 'react javaScript', 'redux'],
+      'Designed and developed my first static real-world project from scratch during my internship at the company. One of the first B2B2C platforms of its kind is i4Sight.',
+    skills: ['html', 'css', 'javaScript'],
   },
 ];

@@ -62,32 +62,36 @@ export default function ProjectCard() {
                     {name}
                   </h3>
                   <div className=' flex gap-2 text-text-secondary text-xl md:text-2xl 2xl:gap-4 2xl:text-3xl'>
-                    <motion.span
-                      className=' hover:text-text transition-colors duration-300'
-                      whileHover={{
-                        y: -3,
-                      }}
-                    >
-                      <Link to={projectLink} target='_blank'>
-                        <MdOutlineOpenInNew />
-                      </Link>
-                    </motion.span>
-                    <motion.span
-                      className=' hover:text-text transition-colors duration-300'
-                      whileHover={{
-                        y: -3,
-                      }}
-                    >
-                      <Link
-                        to={githubLink}
-                        target='_blank'
+                    {projectLink && (
+                      <motion.span
+                        className=' hover:text-text transition-colors duration-300'
                         whileHover={{
                           y: -3,
                         }}
                       >
-                        <FiGithub />
-                      </Link>
-                    </motion.span>
+                        <Link to={projectLink} target='_blank'>
+                          <MdOutlineOpenInNew />
+                        </Link>
+                      </motion.span>
+                    )}
+                    {githubLink && (
+                      <motion.span
+                        className=' hover:text-text transition-colors duration-300'
+                        whileHover={{
+                          y: -3,
+                        }}
+                      >
+                        <Link
+                          to={githubLink}
+                          target='_blank'
+                          whileHover={{
+                            y: -3,
+                          }}
+                        >
+                          <FiGithub />
+                        </Link>
+                      </motion.span>
+                    )}
                   </div>
                 </div>
                 <p className=' text-text text-sm md:text-base 2xl:text-lg'>

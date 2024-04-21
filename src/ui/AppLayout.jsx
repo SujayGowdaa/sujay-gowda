@@ -7,7 +7,7 @@ import Navbar from '../components/navbar/Navbar';
 import NavigationButtons from '../ui/NavigationButtons';
 
 export default function AppLayout() {
-  const { theme, setIsNavOpen, navigation, isLoading } = useAppContext();
+  const { theme, setIsNavOpen, navigation } = useAppContext();
 
   const navigate = useNavigate();
   useEffect(() => {
@@ -39,15 +39,7 @@ export default function AppLayout() {
       default:
         break;
     }
-    window.scrollTo({ top: 0 });
   }, [navigation, navigate]);
-
-  if (isLoading)
-    return (
-      <div className=' h-screen w-screen bg-background flex justify-center items-center'>
-        loading
-      </div>
-    );
 
   return (
     <div className={`theme-${theme}`} onClick={() => setIsNavOpen(false)}>
