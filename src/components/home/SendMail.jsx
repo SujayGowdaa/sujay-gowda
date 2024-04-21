@@ -1,8 +1,16 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export default function SendMail() {
   return (
-    <div className=' relative w-full'>
+    <motion.div
+      className=' relative w-full'
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.3,
+      }}
+    >
       <div className=' h-[1px] bg-gradient-to-r from-gold-light to-gold-dark w-full absolute top-0 md:top-[11px]'></div>
       <Link
         to={''}
@@ -10,6 +18,6 @@ export default function SendMail() {
       >
         send mail
       </Link>
-    </div>
+    </motion.div>
   );
 }

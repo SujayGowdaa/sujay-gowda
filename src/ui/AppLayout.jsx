@@ -1,10 +1,10 @@
 import { Outlet, useNavigate } from 'react-router-dom';
 import { useAppContext } from '../store/AppContext';
+import { useEffect } from 'react';
 
 import ParticlesBackground from '../components/particles/ParticlesBackground';
 import Navbar from '../components/navbar/Navbar';
 import NavigationButtons from '../ui/NavigationButtons';
-import { useEffect } from 'react';
 
 export default function AppLayout() {
   const { theme, setIsNavOpen, navigation, isLoading } = useAppContext();
@@ -55,6 +55,7 @@ export default function AppLayout() {
       <Outlet />
       <NavigationButtons />
       <ParticlesBackground />
+      <div className=' bg-background h-screen w-screen absolute top-0 left-0 z-[-2]'></div>
     </div>
   );
 }
