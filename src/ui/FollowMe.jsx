@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { socialMedia } from '../socialMedia';
 import PageTitleSecondary from './PageTitleSecondary';
 import { MdOpenInNew } from 'react-icons/md';
-import { motion } from 'framer-motion';
+import SlideUpStaggerChildren from './SlideUpStaggerChildren';
 
 export default function FollowMe({ usage }) {
   return (
@@ -27,27 +27,7 @@ export default function FollowMe({ usage }) {
           const { name, link } = media;
 
           return (
-            <motion.span
-              key={name}
-              whileHover={{
-                y: -4,
-                transition: {
-                  duration: 0.1,
-                  type: 'just',
-                },
-              }}
-              initial={{
-                y: 10,
-                opacity: 0,
-              }}
-              whileInView={{
-                y: 0,
-                opacity: 1,
-                transition: {
-                  delay: 0.1 * i,
-                },
-              }}
-            >
+            <SlideUpStaggerChildren key={name} index={i}>
               <Link
                 className=' text-text font-vietnam text-sm capitalize hover:text-accent xs:text-base'
                 to={link}
@@ -55,7 +35,7 @@ export default function FollowMe({ usage }) {
               >
                 {name}
               </Link>
-            </motion.span>
+            </SlideUpStaggerChildren>
           );
         })}
       </div>

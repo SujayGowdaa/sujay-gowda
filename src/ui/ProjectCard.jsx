@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import ProjectChips from './ProjectChips';
+import ButtonPop from './ButtonPop';
 
 const parent = {
   hidden: {
@@ -35,7 +36,7 @@ export default function ProjectCard() {
         return (
           <motion.div
             key={project.name}
-            className=' font-vietnam backdrop-blur-custom p-6 shadow-card outline outline-[2px] outline-background hover:outline hover:outline-[1px] cursor-pointer 2xl:p-8'
+            className=' flex flex-col font-vietnam  backdrop-blur-custom p-6 shadow-card outline outline-[2px] outline-background hover:outline hover:outline-[1px] cursor-pointer 2xl:p-8'
             initial={{
               y: 40,
               opacity: 0,
@@ -52,10 +53,10 @@ export default function ProjectCard() {
               y: -10,
             }}
           >
-            <div className=' pb-6 2xl:pb-8'>
+            <div className='pb-6 2xl:pb-8 '>
               <img src={image} alt={name} />
             </div>
-            <div className=' flex flex-col gap-4 2xl:gap-6'>
+            <div className=' flex flex-col gap-4 2xl:gap-6 '>
               <div className=' flex flex-col gap-2 2xl:gap-4'>
                 <div className=' flex justify-between items-center gap-4'>
                   <h3 className=' font-sans text-accent text-lg font-bold uppercase md:text-xl 2xl:text-2xl'>
@@ -63,24 +64,14 @@ export default function ProjectCard() {
                   </h3>
                   <div className=' flex gap-2 text-text-secondary text-xl md:text-2xl 2xl:gap-4 2xl:text-3xl'>
                     {projectLink && (
-                      <motion.span
-                        className=' hover:text-text transition-colors duration-300'
-                        whileHover={{
-                          y: -3,
-                        }}
-                      >
+                      <ButtonPop className=' hover:text-text transition-colors duration-300'>
                         <Link to={projectLink} target='_blank'>
                           <MdOutlineOpenInNew />
                         </Link>
-                      </motion.span>
+                      </ButtonPop>
                     )}
                     {githubLink && (
-                      <motion.span
-                        className=' hover:text-text transition-colors duration-300'
-                        whileHover={{
-                          y: -3,
-                        }}
-                      >
+                      <ButtonPop className=' hover:text-text transition-colors duration-300'>
                         <Link
                           to={githubLink}
                           target='_blank'
@@ -90,7 +81,7 @@ export default function ProjectCard() {
                         >
                           <FiGithub />
                         </Link>
-                      </motion.span>
+                      </ButtonPop>
                     )}
                   </div>
                 </div>

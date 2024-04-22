@@ -1,13 +1,12 @@
-import { MdOutlineFileDownload } from 'react-icons/md';
-import { TbMailUp } from 'react-icons/tb';
 import { motion } from 'framer-motion';
 
 import Container from '../../ui/Container';
 import PageTitle from '../../ui/PageTitle';
-import PageTitleSecondary from '../../ui/PageTitleSecondary';
-import Paragraph from '../../ui/Paragraph';
-import Links from '../../ui/Links';
 import FollowMe from '../../ui/FollowMe';
+import Developer from './Developer';
+import SlideUp from '../../ui/SlideUp';
+import CtaButtons from './CtaButtons';
+import Content from './Content';
 
 export default function ContactContainer() {
   return (
@@ -18,6 +17,7 @@ export default function ContactContainer() {
         opacity: 0,
         transition: {
           staggerChild: 0.3,
+          when: 'beforeChildren',
         },
       }}
       whileInView={{
@@ -30,108 +30,17 @@ export default function ContactContainer() {
     >
       <Container>
         <PageTitle title={'contact'} />
-        <motion.div
-          className=' flex flex-col gap-2 xs:gap-3'
-          initial={{
-            y: 40,
-            opacity: 0,
-            transition: {
-              staggerChild: 0.3,
-            },
-          }}
-          whileInView={{
-            y: 0,
-            opacity: 1,
-            transition: {
-              duration: 0.3,
-            },
-          }}
-        >
-          <PageTitleSecondary
-            className=' text-text capitalize'
-            title={'"Open to New Opportunities and Collaborations"'}
-          />
-          <Paragraph className={' text-text-secondary text-center '}>
-            If you have a project idea, a collaboration proposal, or simply want
-            to connect and explore potential synergies, feel free to drop me a
-            line
-          </Paragraph>
-        </motion.div>
-        <motion.div
-          className=' flex gap-6 w-full flex-wrap justify-center xs:justify-start xs:flex-row'
-          initial={{
-            y: 40,
-            opacity: 0,
-            transition: {
-              staggerChild: 0.3,
-            },
-          }}
-          whileInView={{
-            y: 0,
-            opacity: 1,
-            transition: {
-              duration: 0.3,
-            },
-          }}
-        >
-          <motion.span
-            whileHover={{
-              y: -4,
-            }}
-          >
-            <Links
-              className={` group bg-gradient-to-r from-gold-light to-gold-dark transition-all duration-100 shadow-btn-main text-background hover:outline hover:outline-[1px] hover:outline-accent`}
-            >
-              let&apos;s work together
-              <TbMailUp className=' transition-all duration-100 text-xl group-hover:text-text' />
-            </Links>
-          </motion.span>
-          <motion.span
-            whileHover={{
-              y: -4,
-            }}
-          >
-            <Links
-              className={
-                ' transition-all duration-100  text-text min-w-[228px] group'
-              }
-            >
-              download resume
-              <MdOutlineFileDownload className='transition-all text-xl group-hover:text-accent' />
-            </Links>
-          </motion.span>
-        </motion.div>
+        <SlideUp className=' flex flex-col gap-2 xs:gap-3'>
+          <Content />
+        </SlideUp>
+        <SlideUp className=' flex gap-6 w-full flex-wrap justify-center xs:justify-start xs:flex-row'>
+          <CtaButtons />
+        </SlideUp>
       </Container>
-      <div>
-        <motion.div
-          className='flex flex-col gap-4 font-vietnam capitalize text-center py-6 px-4 pb-20 xs:p-8 xs:pb-24 sm:p-10 sm:pb-26 lg:p-12 lg:pb-28 xs:text-left md:flex-row md:justify-between'
-          initial={{
-            y: 40,
-            opacity: 0,
-            transition: {
-              staggerChild: 0.3,
-            },
-          }}
-          whileInView={{
-            y: 0,
-            opacity: 1,
-            transition: {
-              duration: 0.3,
-            },
-          }}
-        >
-          <FollowMe />
-
-          <div className='flex flex-col gap-2 font-vietnam capitalize text-center xs:text-left xs:gap-4'>
-            <span className=' text-sm text-text-secondary xs:text-base'>
-              designed & developed by
-            </span>
-            <span className=' text-xs font-semibold text-center font-vietnam uppercase xs:text-left bg-clip-text text-transparent bg-gradient-to-r from-gold-light to-gold-dark xs:text-base '>
-              sujay gowda
-            </span>
-          </div>
-        </motion.div>
-      </div>
+      <SlideUp className='flex flex-col gap-4 font-vietnam capitalize text-center py-6 px-4 pb-20 xs:p-8 xs:pb-24 sm:p-10 sm:pb-26 lg:p-12 lg:pb-28 xs:text-left md:flex-row md:justify-between'>
+        <FollowMe />
+        <Developer />
+      </SlideUp>
     </motion.div>
   );
 }

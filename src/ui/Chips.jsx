@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { motion } from 'framer-motion';
+import SlideUpStaggerChildren from './SlideUpStaggerChildren';
 
 export default function Chips({ skills, title, center }) {
   return (
@@ -32,30 +33,13 @@ export default function Chips({ skills, title, center }) {
       >
         {skills.map((skill, i) => {
           return (
-            <motion.span
+            <SlideUpStaggerChildren
               key={skill}
+              index={i}
               className=' text-nowrap inline-block text-[10px] outline outline-[1px] outline-shadow text-text font-light px-[10px] py-[3px] capitalize md:text-xs 2xl:text-sm 2xl:px-3 2xl:py-1 backdrop-blur-custom'
-              whileHover={{
-                y: -3,
-              }}
-              initial={{
-                y: 20,
-                opacity: 0,
-                transition: {
-                  staggerChild: 0.3,
-                },
-              }}
-              whileInView={{
-                y: 0,
-                opacity: 1,
-                transition: {
-                  duration: 0.3,
-                  delay: 0.1 * i,
-                },
-              }}
             >
               {skill}
-            </motion.span>
+            </SlideUpStaggerChildren>
           );
         })}
       </div>

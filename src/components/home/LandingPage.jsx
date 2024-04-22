@@ -6,7 +6,6 @@ import { motion } from 'framer-motion';
 export default function LandingPage() {
   const { viewportWidth } = useViewPort();
 
-  console.log(viewportWidth);
   return (
     <div className=' text-center flex justify-center items-center flex-col gap-4 xs:flex-row xs:text-left'>
       <motion.span
