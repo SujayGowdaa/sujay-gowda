@@ -1,13 +1,13 @@
-import Logo from '../../ui/Logo';
-import useViewPort from '../../utils/useViewPort';
-import Title from './Title';
-import { motion } from 'framer-motion';
+import Logo from "../../ui/Logo";
+import useViewPort from "../../utils/useViewPort";
+import Title from "./Title";
+import { motion } from "framer-motion";
 
 export default function LandingPage() {
   const { viewportWidth } = useViewPort();
 
   return (
-    <div className=' text-center flex justify-center items-center flex-col gap-4 xs:flex-row xs:text-left'>
+    <div className=" flex flex-col items-center justify-center gap-4 text-center xs:flex-row xs:text-left">
       <motion.span
         initial={
           viewportWidth < 480
@@ -35,7 +35,7 @@ export default function LandingPage() {
           duration: 0.3,
         }}
       >
-        <Logo width={'w-[80px] md:w-[100px]'} />
+        <Logo width={"w-[80px] md:w-[100px]"} />
       </motion.span>
       <motion.span
         initial={

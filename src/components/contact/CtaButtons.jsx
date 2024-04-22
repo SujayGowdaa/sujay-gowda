@@ -20,7 +20,7 @@ export default function CtaButtons() {
           className={
             ' transition-all duration-100  text-text min-w-[228px] group'
           }
-          to={'/public/resume/sujaygowda.pdf'}
+          to={'/resume/sujaygowda.pdf'}
         >
           download resume
           <MdOutlineFileDownload className='transition-all text-xl group-hover:text-accent' />

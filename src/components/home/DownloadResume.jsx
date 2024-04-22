@@ -1,21 +1,21 @@
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function DownloadResume() {
   return (
     <motion.div
-      className=' relative w-full '
+      className=" relative w-full "
       initial={{ opacity: 0, y: -100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
         duration: 0.3,
       }}
     >
-      <div className=' h-[1px] bg-gradient-to-r from-gold-light to-gold-dark w-full absolute top-0 md:top-[-11px] '></div>
+      <div className=" absolute top-0 h-[1px] w-full bg-gradient-to-r from-gold-light to-gold-dark md:top-[-11px] "></div>
       <Link
-        to='/public/resume/sujaygowda.pdf'
-        target='_blank'
-        className=' flex items-center gap-2 hover:text-accent text-text-secondary transition-colors duration-300  right-[50%] translate-x-[120%] bg-background absolute translate-y-[-50%] font-vietnam capitalize text-xs px-2 py-1 xs:translate-x-[158%] md:translate-x-[182%] md:translate-y-[-90%] md:text-sm'
+        to="/public/resume/sujaygowda.pdf"
+        target="_blank"
+        className=" bg-backgroundpx-2 absolute right-[50%] flex translate-x-[120%] translate-y-[-50%] items-center gap-2 py-1 font-vietnam text-xs capitalize text-text-secondary transition-colors duration-300 hover:text-accent xs:translate-x-[158%] md:translate-x-[182%] md:translate-y-[-90%] md:text-sm"
       >
         download resume
       </Link>
