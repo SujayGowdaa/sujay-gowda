@@ -39,7 +39,7 @@ export default {
       },
     },
     fontFamily: {
-      sans: ["custom", "sans-serif"],
+      sans: ["custom-nexa", "sans-serif"],
       vietnam: ["Be Vietnam Pro", "sans-serif"],
     },
   },

@@ -6,10 +6,9 @@
 
 /* Custom Fonts  */
 @font-face {
-  font-family: "custom";
+  font-family: "custom-nexa";
   src: url("../public/fonts/Nexa.ttf");
 }
-
 @layer base {
   :root {
     /* Custom Colors */
