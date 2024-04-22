@@ -7,7 +7,7 @@
 /* Custom Fonts  */
 @font-face {
   font-family: "custom-nexa";
-  src: url("../public/fonts/Nexa.ttf");
+  src: url("/fonts/Nexa.ttf");
 }
 @layer base {
   :root {
