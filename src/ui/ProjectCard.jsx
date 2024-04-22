@@ -25,7 +25,7 @@ const parent = {
 export default function ProjectCard() {
   return (
     <motion.div
-      className=' grid grid-cols-1 gap-6 sm:grid-cols-2 xs:gap-8 lg:grid-cols-3 lg:gap-10 xl:gap-12 '
+      className=' grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3  '
       variants={parent}
       initial='hidden'
       animate='show'
@@ -36,7 +36,7 @@ export default function ProjectCard() {
         return (
           <motion.div
             key={project.name}
-            className=' flex flex-col font-vietnam  backdrop-blur-custom p-6 shadow-card outline outline-[2px] outline-background hover:outline hover:outline-[1px] cursor-pointer 2xl:p-8'
+            className=' flex flex-col font-vietnam  backdrop-blur-custom p-6 shadow-card outline outline-[2px] outline-background hover:outline hover:outline-[1px] cursor-pointer '
             initial={{
               y: 40,
               opacity: 0,
@@ -45,50 +45,46 @@ export default function ProjectCard() {
               y: 0,
               opacity: 1,
               transition: {
-                duration: 0.3,
+                duration: 0.4,
               },
             }}
             whileHover={{
               outline: '1px solid var(--accent)',
-              y: -10,
+              y: -8,
             }}
           >
-            <div className='pb-6 2xl:pb-8 '>
-              <img src={image} alt={name} />
+            <div className='pb-6'>
+              <img className=' ' src={image} alt={name} />
             </div>
-            <div className=' flex flex-col gap-4 2xl:gap-6 '>
-              <div className=' flex flex-col gap-2 2xl:gap-4'>
-                <div className=' flex justify-between items-center gap-4'>
-                  <h3 className=' font-sans text-accent text-lg font-bold uppercase md:text-xl 2xl:text-2xl'>
-                    {name}
-                  </h3>
-                  <div className=' flex gap-2 text-text-secondary text-xl md:text-2xl 2xl:gap-4 2xl:text-3xl'>
-                    {projectLink && (
-                      <ButtonPop className=' hover:text-text transition-colors duration-300'>
-                        <Link to={projectLink} target='_blank'>
-                          <MdOutlineOpenInNew />
-                        </Link>
-                      </ButtonPop>
-                    )}
-                    {githubLink && (
-                      <ButtonPop className=' hover:text-text transition-colors duration-300'>
-                        <Link
-                          to={githubLink}
-                          target='_blank'
-                          whileHover={{
-                            y: -3,
-                          }}
-                        >
-                          <FiGithub />
-                        </Link>
-                      </ButtonPop>
-                    )}
-                  </div>
+            <div className=' flex flex-col gap-4 p-3 md:gap-4'>
+              <div className=' flex justify-between items-center gap-4 '>
+                <h3 className=' font-sans text-accent text-lg font-bold uppercase md:text-xl'>
+                  {name}
+                </h3>
+                <div className=' flex gap-2 text-text-secondary text-xl md:gap-3 md:text-2xl '>
+                  {projectLink && (
+                    <ButtonPop className=' hover:text-text transition-colors duration-300'>
+                      <Link to={projectLink} target='_blank'>
+                        <MdOutlineOpenInNew />
+                      </Link>
+                    </ButtonPop>
+                  )}
+                  {githubLink && (
+                    <ButtonPop className=' hover:text-text transition-colors duration-300'>
+                      <Link
+                        to={githubLink}
+                        target='_blank'
+                        whileHover={{
+                          y: -3,
+                        }}
+                      >
+                        <FiGithub />
+                      </Link>
+                    </ButtonPop>
+                  )}
                 </div>
-                <p className=' text-text text-sm md:text-base 2xl:text-lg'>
-                  {description}
-                </p>
               </div>
+              <p className=' text-text text-sm md:text-base'>{description}</p>
               <ProjectChips skills={skills} title={'tech stack'} />
             </div>
           </motion.div>
