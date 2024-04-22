@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -8,8 +8,8 @@
   :root {
     /* Custom Fonts */
     @font-face {
-      font-family: 'NEXA';
-      src: url('../fonts/Nexa.ttf') format('ttf');
+      font-family: "NEXA";
+      src: url("/public/fonts/Nexa.ttf") format("ttf");
     }
 
     /* Custom Colors */
