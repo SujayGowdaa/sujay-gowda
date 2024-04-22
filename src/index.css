@@ -4,14 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom Fonts  */
+@font-face {
+  font-family: "custom";
+  src: url("../public/fonts/Nexa.ttf");
+}
+
 @layer base {
   :root {
-    /* Custom Fonts */
-    @font-face {
-      font-family: "NEXA";
-      src: url("/public/fonts/Nexa.ttf") format("ttf");
-    }
-
     /* Custom Colors */
     --color-background-white: #ffffff;
     --color-background-black: #000000;
