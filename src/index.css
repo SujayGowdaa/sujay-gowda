@@ -8,8 +8,8 @@
   :root {
     /* Custom Fonts */
     @font-face {
-      font-family: "NEXA";
-      src: url("/public/fonts/Nexa.ttf") format("ttf");
+      font-family: "Nexa";
+      src: url("/public/fonts/Nexa.ttf") format("TTF");
     }
 
     /* Custom Colors */
