@@ -1,18 +1,18 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import AppContext from './store/AppContext';
-import AppLayout from './ui/AppLayout';
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import AppContext from "./store/AppContext";
+import AppLayout from "./ui/AppLayout";
 
-import Home from '/src/pages/Home';
-import Projects from '/src/pages/Projects';
-import Experience from '/src/pages/Experience';
-import Qualification from '/src/pages/Qualification';
-import About from '/src/pages/About';
-import Contact from '/src/pages/Contact';
+import Home from "/src/pages/Home";
+import Projects from "/src/pages/Projects";
+import Experience from "/src/pages/Experience";
+import Qualification from "/src/pages/Qualification";
+import About from "/src/pages/About";
+import Contact from "/src/pages/Contact";
 
 export default function App() {
   const router = createBrowserRouter([
     {
-      path: '/',
+      path: "/",
       element: <AppLayout />,
       children: [
         {
@@ -20,23 +20,23 @@ export default function App() {
           index: true,
         },
         {
-          path: '/projects',
+          path: "/projects",
           element: <Projects />,
         },
         {
-          path: '/experience',
+          path: "/experience",
           element: <Experience />,
         },
         {
-          path: '/qualification',
+          path: "/qualification",
           element: <Qualification />,
         },
         {
-          path: '/about',
+          path: "/about",
           element: <About />,
         },
         {
-          path: '/contact',
+          path: "/contact",
           element: <Contact />,
         },
       ],
