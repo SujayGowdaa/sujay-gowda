@@ -10,7 +10,7 @@ export const projects = [
     projectLink: "https://cheffest.netlify.app/",
     githubLink: "https://github.com/SujayGowdaa/cheffest",
     description:
-      "Cheffest is a food ordering app where users can order for food. The remote state of the application is managed with react query and the form validation using react hook form. The backend is powered by supabase.",
+      "Cheffest elevates food ordering with user-friendly design. With React Query for agile state management, React Hook Form for precise validation, and Supabase for robust backend support, it delivers an unparalleled experience of efficiency, reliability, and security.",
     skills: [
       "html",
       "css",
