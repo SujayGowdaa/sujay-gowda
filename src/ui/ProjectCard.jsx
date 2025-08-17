@@ -31,7 +31,7 @@ export default function ProjectCard() {
       animate="show"
     >
       {projects.map((project) => {
-        const { name, image, description, projectLink, githubLink, skills } =
+        const { name, image, description, projectLink, githubLink, tags } =
           project;
         return (
           <motion.div
@@ -94,7 +94,7 @@ export default function ProjectCard() {
                 </div>
               </div>
               <p className=" text-sm text-text md:text-base">{description}</p>
-              <ProjectChips skills={skills} title={"tech stack & tools"} />
+              <ProjectChips tags={tags} title={"tags"} />
             </div>
           </motion.div>
         );
