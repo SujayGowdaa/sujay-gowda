@@ -53,9 +53,9 @@ export const projects = [
   },
   {
     name: "todo app",
-    image: todo, // Replace with an actual image URL or reference
-    projectLink: "https://todo-list-pure-js.netlify.app/", // Replace with a live demo link
-    githubLink: "https://github.com/your-username/your-todo-app-repo", // Replace with a link to your GitHub repository
+    image: todo,
+    projectLink: "https://todo-list-pure-js.netlify.app/",
+    githubLink: "https://github.com/SujayGowdaa/ToDoList",
     description:
       "A simple, classic to-do list application for managing daily tasks. It allows users to add, mark as completed, and remove tasks from a list. The application is built with vanilla JavaScript, demonstrating fundamental DOM manipulation and event handling.",
     skills: [

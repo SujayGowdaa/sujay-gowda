@@ -52,7 +52,10 @@ export default function ProjectCard() {
               outline: "1px solid var(--accent)",
               y: -8,
             }}
-            onClick={() => window.open(projectLink)}
+            onClick={(e) => {
+              e.stopPropagation();
+              window.open(projectLink);
+            }}
           >
             <div className="pb-6">
               <img className=" " src={image} alt={name} />
@@ -65,7 +68,11 @@ export default function ProjectCard() {
                 <div className=" flex gap-2 text-xl text-text-secondary md:gap-3 md:text-2xl ">
                   {projectLink && (
                     <ButtonPop className=" transition-colors duration-300 hover:text-text">
-                      <Link to={projectLink} target="_blank">
+                      <Link
+                        to={projectLink}
+                        target="_blank"
+                        onClick={(e) => e.stopPropagation()}
+                      >
                         <MdOutlineOpenInNew />
                       </Link>
                     </ButtonPop>
@@ -78,6 +85,7 @@ export default function ProjectCard() {
                         whileHover={{
                           y: -3,
                         }}
+                        onClick={(e) => e.stopPropagation()}
                       >
                         <FiGithub />
                       </Link>
