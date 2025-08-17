@@ -5,7 +5,7 @@ export default function Title() {
         sujay gowda
       </h1>
       <h2 className=" font-vietnam text-base capitalize text-text-secondary md:text-xl">
-        frontend developer | image editor
+        react JS developer | frontend developer
       </h2>
     </div>
   );

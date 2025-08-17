@@ -3,15 +3,15 @@ export const qualifications = [
     main: [
       {
         course: "bachelor of computer applications",
-        institue: "manipal university jaipur",
+        institue: "manipal university, jaipur",
         duration: {
           start: "2022",
-          end: "2025",
+          end: "2025 (Completed)",
         },
       },
       {
         course: "advanced professional course in visual effects",
-        institue: "ignosi infinity",
+        institue: "ignosi infinity, bangalore",
         duration: {
           start: "2016",
           end: "2019",
@@ -21,6 +21,13 @@ export const qualifications = [
   },
   {
     certificates: [
+      {
+        course: "React & TypeScript - The Practical Guide",
+        issuedAt: "apr 2025",
+        issuedBy: "udemy",
+        id: "UC-619540b5-bc30-4648-833a-3172debe238c",
+        link: "https://udemy-certificate.s3.amazonaws.com/pdf/UC-619540b5-bc30-4648-833a-3172debe238c.pdf",
+      },
       {
         course: "Version Control",
         issuedAt: "apr 2024",

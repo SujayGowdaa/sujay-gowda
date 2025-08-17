@@ -1,29 +1,29 @@
-import ButtonPop from '../../ui/ButtonPop';
-import Links from '../../ui/Links';
-import { TbMailUp } from 'react-icons/tb';
-import { MdOutlineFileDownload } from 'react-icons/md';
+import ButtonPop from "../../ui/ButtonPop";
+import Links from "../../ui/Links";
+import { TbMailUp } from "react-icons/tb";
+import { MdOutlineFileDownload } from "react-icons/md";
 
 export default function CtaButtons() {
   return (
     <>
       <ButtonPop>
         <Links
-          className={` group bg-gradient-to-r from-gold-light to-gold-dark transition-all duration-100 shadow-btn-main text-background hover:outline hover:outline-[1px] hover:outline-accent`}
-          to='mailto:sujaygowda.dev@gmail.com'
+          className={` group bg-gradient-to-r from-gold-light to-gold-dark text-background shadow-btn-main transition-all duration-100 hover:outline hover:outline-[1px] hover:outline-accent`}
+          to="mailto:sujaygowda.dev@gmail.com"
         >
           let&apos;s work together
-          <TbMailUp className=' transition-all duration-100 text-xl group-hover:text-text' />
+          <TbMailUp className=" text-xl transition-all duration-100 group-hover:text-text" />
         </Links>
       </ButtonPop>
       <ButtonPop>
         <Links
           className={
-            ' transition-all duration-100  text-text min-w-[228px] group'
+            " group min-w-[228px]  text-text transition-all duration-100"
           }
-          to={'/resume/sujaygowda.pdf'}
+          to={"/resume/sujay_frontend_resume.pdf"}
         >
           download resume
-          <MdOutlineFileDownload className='transition-all text-xl group-hover:text-accent' />
+          <MdOutlineFileDownload className="text-xl transition-all group-hover:text-accent" />
         </Links>
       </ButtonPop>
     </>
