@@ -5,6 +5,7 @@ import towerBuddy1 from "./assets/projectCover/towerbuddy1.png";
 import i4sight from "./assets/projectCover/i4sight.png";
 import todo from "./assets/projectCover/todo.png";
 import omnifood from "./assets/projectCover/omnifood.png";
+import reactRedux from "./assets/projectCover/redux-todo.png";
 
 export const projects = [
   {
@@ -94,6 +95,23 @@ export const projects = [
       "Responsive Design",
       "Flexbox",
       "CSS Grid",
+    ],
+  },
+  {
+    name: "Redux TODO App",
+    image: reactRedux,
+    projectLink: "https://todo-app-react-redux-sujaygowda.netlify.app/",
+    githubLink: "https://github.com/SujayGowdaa/redux-todo-app",
+    description:
+      "An interactive TODO list app built with React, Redux Toolkit, and Tailwind CSS with shadcn/ui. It supports localStorage persistence, allowing users to add, update, complete, delete, and restore tasks organized into Pending, Completed, and Deleted sections.",
+    tags: [
+      "react",
+      "redux toolkit",
+      "javascript",
+      "tailwind css",
+      "shadcn/ui",
+      "html",
+      "css",
     ],
   },
   {

@@ -1,12 +1,12 @@
-import { useMemo } from 'react';
-import { useAppContext } from '../../store/AppContext';
+import { useMemo } from "react";
+import { useAppContext } from "../../store/AppContext";
 
 export default function useParticleConfig() {
   const { theme } = useAppContext();
 
   let color = {
-    background: theme === 'light' ? '#ffffff' : '#0a0a0a',
-    lines: theme === 'light' ? '#0a0a0a' : '#FFFFFF',
+    background: theme === "light" ? "#ffffff" : "#0a0a0a",
+    lines: theme === "light" ? "#0a0a0a" : "#FFFFFF",
   };
 
   const options = useMemo(
@@ -21,11 +21,11 @@ export default function useParticleConfig() {
         events: {
           onClick: {
             enable: false,
-            mode: 'push',
+            mode: "push",
           },
           onHover: {
             enable: true,
-            mode: 'repulse',
+            mode: "repulse",
           },
         },
         modes: {
@@ -50,13 +50,13 @@ export default function useParticleConfig() {
           width: 1.2,
         },
         move: {
-          direction: 'none',
+          direction: "none",
           enable: true,
           outModes: {
-            default: 'bounce',
+            default: "bounce",
           },
           random: true,
-          speed: 3,
+          speed: 1.5,
           straight: false,
         },
         number: {
@@ -69,7 +69,7 @@ export default function useParticleConfig() {
           value: 0.6,
         },
         shape: {
-          type: 'circle',
+          type: "circle",
         },
         size: {
           value: { min: 1, max: 4 },
@@ -78,7 +78,7 @@ export default function useParticleConfig() {
       },
       detectRetina: true,
     }),
-    [color.lines, color.background]
+    [color.lines, color.background],
   );
 
   return { options };

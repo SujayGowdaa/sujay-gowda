@@ -15,7 +15,7 @@ export default function Button({
   if (type === "circle")
     return (
       <motion.button
-        className={` ${className} group pointer-events-auto flex items-center justify-center rounded-full p-2 outline outline-1 outline-shadow hover:bg-background hover:shadow-btn 2xl:p-3 ${
+        className={` ${className} group pointer-events-auto flex items-center justify-center rounded-full p-2 shadow-btn outline outline-1 outline-shadow hover:bg-background 2xl:p-3 ${
           !position && " bg-glass shadow-btn"
         } 
 
@@ -27,13 +27,22 @@ export default function Button({
           x: !position && -50,
         }}
         animate={
-          !position && {
-            rotate: isNavOpen ? 0 : 180,
-            x: 0,
-            transition: {
-              duration: 0.3,
-            },
-          }
+          !position &&
+          (!isNavOpen
+            ? {
+                x: [0, 12, 0],
+                transition: {
+                  duration: 1, // make it slower (2 seconds per cycle)
+                  repeat: Infinity, // loop forever
+                  repeatType: "loop",
+                  ease: "easeInOut",
+                },
+              }
+            : {
+                rotate: isNavOpen ? 0 : 180,
+                x: 0,
+                transition: { duration: 0.3 },
+              })
         }
         whileHover={{
           x:
@@ -41,9 +50,7 @@ export default function Button({
             (position === "right" && [-2, 4]),
           transition: {
             repeat: Infinity,
-            delay: 0.1,
-            repeatType: "mirror",
-            duration: 0.3,
+            duration: 2,
             ease: "easeOut",
           },
         }}
