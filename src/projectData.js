@@ -103,10 +103,11 @@ export const projects = [
     projectLink: "https://todo-app-react-redux-sujaygowda.netlify.app/",
     githubLink: "https://github.com/SujayGowdaa/redux-todo-app",
     description:
-      "An interactive TODO list app built with React, Redux Toolkit, and Tailwind CSS with shadcn/ui. It supports localStorage persistence, allowing users to add, update, complete, delete, and restore tasks organized into Pending, Completed, and Deleted sections.",
+      "An interactive TODO list app built with React, Redux Toolkit, and Tailwind CSS with shadcn/ui. It now uses Redux Thunk to fetch and manage todos from an API, alongside localStorage persistence. Users can add, update, complete, delete, and restore tasks organized into Pending, Completed, and Deleted sections.",
     tags: [
       "react",
       "redux toolkit",
+      "redux thunk",
       "javascript",
       "tailwind css",
       "shadcn/ui",

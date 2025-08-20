@@ -9,6 +9,7 @@ export const skills = [
         "react JS",
         "redux",
         "redux toolkit",
+        "redux thunk",
         "react query",
         "tailwind css",
         "google tag manager",
