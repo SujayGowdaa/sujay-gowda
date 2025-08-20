@@ -15,12 +15,10 @@ export default function Button({
   if (type === "circle")
     return (
       <motion.button
-        className={` ${className} group pointer-events-auto flex items-center justify-center rounded-full p-2 shadow-btn outline outline-1 outline-shadow hover:bg-background 2xl:p-3 ${
-          !position && " bg-glass shadow-btn"
-        } 
+        className={` ${className} bghover:bg-text group pointer-events-auto flex items-center justify-center rounded-full bg-background p-3 text-lg shadow-btn outline outline-1 outline-shadow hover:bg-text 2xl:p-3.5
 
         ${
-          position && " backdrop-blur-custom active:shadow-btn-active "
+          position && "  active:shadow-btn-active "
         } ${disable && " cursor-not-allowed hover:shadow-none"}`}
         initial={{
           rotate: !position && 180,
@@ -61,7 +59,7 @@ export default function Button({
         }}
       >
         <IoIosArrowForward
-          className={` fill-text transition-all duration-300 group-hover:fill-accent  ${
+          className={` fill-text transition-all duration-300 group-hover:fill-background group-active:fill-accent  ${
             position === "left" && " rotate-180"
           }
                ${isNavOpen && !position && " fill-accent "}

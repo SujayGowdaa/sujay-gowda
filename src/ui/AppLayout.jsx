@@ -57,7 +57,7 @@ export default function AppLayout() {
           <ParticlesBackground />
         </>
       )}
-      <div className=" absolute left-0 top-0 z-[-2] h-screen w-screen bg-background"></div>
+      <div className=" absolute left-0 top-0 z-[-2] h-full w-screen bg-background"></div>
     </div>
   );
 }

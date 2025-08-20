@@ -28,7 +28,7 @@ export default function ParticlesBackground() {
         id="tsparticles"
         particlesLoaded={particlesLoaded}
         options={options}
-        className=" absolute left-0 top-0 z-[-1] opacity-50"
+        className=" absolute left-0 top-0 z-[-1] opacity-60"
       />
     );
   }

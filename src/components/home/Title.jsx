@@ -5,7 +5,11 @@ export default function Title() {
         sujay gowda
       </h1>
       <h2 className=" font-vietnam text-base capitalize text-text-secondary md:text-xl">
-        react JS developer | frontend developer
+        Frontend Developer | React JS <br />{" "}
+        <span className=" normal-case">
+          {" "}
+          Building clean, user-friendly web apps.
+        </span>
       </h2>
     </div>
   );

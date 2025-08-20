@@ -1,16 +1,16 @@
-import PageTitleSecondary from '../../ui/PageTitleSecondary';
-import Paragraph from '../../ui/Paragraph';
+import PageTitleSecondary from "../../ui/PageTitleSecondary";
+import Paragraph from "../../ui/Paragraph";
 
 export default function Content() {
   return (
     <>
       <PageTitleSecondary
-        className=' text-text capitalize'
-        title={'"Open to New Opportunities and Collaborations"'}
+        className=" capitalize text-text"
+        title={'"Open to new opportunities and collaborations"'}
       />
-      <Paragraph className={' text-text-secondary text-center '}>
+      <Paragraph className={" text-center text-text-secondary "}>
         If you have a project idea, a collaboration proposal, or simply want to
-        connect and explore potential synergies, feel free to drop me a line
+        connect, drop me a line.
       </Paragraph>
     </>
   );

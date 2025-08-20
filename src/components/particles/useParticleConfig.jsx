@@ -56,14 +56,14 @@ export default function useParticleConfig() {
             default: "bounce",
           },
           random: true,
-          speed: 1.5,
+          speed: 1,
           straight: false,
         },
         number: {
           density: {
             enable: true,
           },
-          value: 140,
+          value: 80,
         },
         opacity: {
           value: 0.6,
