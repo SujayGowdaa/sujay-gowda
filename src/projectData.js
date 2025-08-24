@@ -60,7 +60,6 @@ export const projects = [
       "CSS",
       "JavaScript",
       "React JS",
-      "redux",
       "Interactive UI",
       "Responsive Design",
     ],

@@ -13,9 +13,22 @@ export const work = [
       "Spearheaded efficient Git/GitHub version control and team collaboration, ensuring code integrity and rapid development.",
       "Elevated UI aesthetics by crafting custom icons, logos, and visual assets using Figma, Adobe Illustrator, and Photoshop.",
     ],
-    type: "remote",
+    type: "hybrid",
     location: "banaglore",
-    links: ["https://towerbuddy.tel/", "https://www.i4sight.net/"],
+  },
+  {
+    role: "web developer intern (part-time)",
+    company: "MetaPouch Technologies Pvt Ltd",
+    start: "feb 2023",
+    end: "mar 2024",
+    responsibilities: [
+      "Contributed to the design, development, and management of the company’s product website (www.metapouch.io).",
+      "Built responsive UI components ensuring improved functionality, performance, and user experience.",
+      "Applied React.js, JavaScript (ES6+), HTML, CSS, and Tailwind CSS for front-end development tasks.",
+      "Collaborated with the team to maintain and enhance product features in a part-time internship role.",
+    ],
+    type: "remote",
+    location: "bangalore",
   },
   {
     role: "data labelling specialist",
@@ -30,7 +43,6 @@ export const work = [
     ],
     type: "remote",
     location: "bangalore",
-    links: "",
   },
   {
     role: "image editor",
@@ -45,7 +57,6 @@ export const work = [
     ],
     type: "hybrid",
     location: "bangalore",
-    links: "",
   },
   {
     role: "digital imager",
@@ -60,7 +71,6 @@ export const work = [
     ],
     type: "hybrid",
     location: "bangalore",
-    links: "",
   },
   {
     role: "imager editor",
@@ -74,6 +84,5 @@ export const work = [
     ],
     type: "on-sight",
     location: "bangalore",
-    links: "",
   },
 ];
